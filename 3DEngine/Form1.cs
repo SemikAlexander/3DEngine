@@ -1629,7 +1629,6 @@ namespace _3DEngine
                 }
                 catch (Exception exception)
                 {
-                    //Log.Append(exception.StackTrace);
                     MessageBox.Show("Unable to import scene! File is corrupted.", Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
