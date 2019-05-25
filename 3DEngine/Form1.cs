@@ -361,8 +361,8 @@ namespace _3DEngine
 
         private void AddObject_Click(object sender, EventArgs e)
         {
-            //CreateObject form = new CreateObject(this, null);
-            //form.ShowDialog();
+            AddObject form = new AddObject(this, null);
+            form.ShowDialog();
         }
 
         private void AddPrimitive_Click(object sender, EventArgs e)
