@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\bin\Debug\3DEngine.exe.config
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\bin\Debug\3DEngine.exe
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\bin\Debug\3DEngine.pdb
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\3DEngine.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\_3DEngine.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\3DEngine.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\3DEngine.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\3DEngine.exe
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\3DEngine.pdb
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\3DEngine\3DEngine\obj\Debug\_3DEngine.Main.resources
