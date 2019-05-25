@@ -22,7 +22,7 @@ namespace _3DEngine
         {
             InitializeComponent();
 
-            scene = new Scene(Canvas);
+            scene = new Scene(RenderPicture);
 
             IsUpdating = true;
 
@@ -46,7 +46,7 @@ namespace _3DEngine
 
             //ObjectsList.SelectedIndex = 0;
 
-            Canvas.MouseWheel += new MouseEventHandler(Canvas_MouseWheel);
+            RenderPicture.MouseWheel += new MouseEventHandler(Canvas_MouseWheel);
         }
 
         private void ResetCamera_Click(object sender, EventArgs e)
@@ -223,7 +223,6 @@ namespace _3DEngine
                     {
                         PrimitivesList.Items.Add(scenePrimitive.Name);
                     }
-                    AddPrimitive.Enabled = true;
                     ConsoleParameters.Visible = ConsoleParameters.Enabled = false;
                 }
                 else
@@ -353,7 +352,7 @@ namespace _3DEngine
                 MainTimer.Enabled = true;
                 if (scene != null)
                 {
-                    scene.Camera.ResizeFrame(Canvas.ClientSize.Width, Canvas.ClientSize.Height);
+                    scene.Camera.ResizeFrame(RenderPicture.ClientSize.Width, RenderPicture.ClientSize.Height);
                     scene.PaintObjects();
                 }
             }
@@ -382,7 +381,6 @@ namespace _3DEngine
             RadiusBox.Value = WidthBox.Value = HeightBox.Value = LengthBox.Value = 25;
             SegmentsBox.Value = 16;
             ColorBox.BackColor = Color.LightGray;
-            ParametersPanel.Visible = ParametersPanel.Enabled = DeletePrimitive.Enabled = ColorBox.Enabled = PrimitivesList.SelectedIndex != 0;
             if (PrimitivesList.SelectedIndex == 0)
             {
                 currentPrimitive = null;
@@ -463,8 +461,6 @@ namespace _3DEngine
             {
                 DeleteObject.Enabled = false;
                 PrimitivesList.Items.Clear();
-                AddPrimitive.Enabled = false;
-                DeletePrimitive.Enabled = false;
                 SpacePanel.Enabled = false;
                 PositionX.Value = PositionY.Value = PositionZ.Value = 0;
                 RotateX.Value = RotateY.Value = RotateZ.Value = 0;
@@ -474,6 +470,7 @@ namespace _3DEngine
                 ParametersPanel.Visible = ParametersPanel.Enabled = false;
                 ConsoleParameters.Visible = ConsoleParameters.Enabled = false;
             }
+            RenderPicture.Image = null;
         }
 
         private void ColorBox_Click(object sender, EventArgs e)
@@ -598,7 +595,7 @@ namespace _3DEngine
                     currentObject.BasePoint.Z - Math.Max(currentObject.MaxLength + scene.Camera.NearClippingPlaneZ, 100)
                     );
                 scene.Camera.FarClippingPlaneZ = Math.Max(scene.Camera.FarClippingPlaneZ, currentObject.MaxLength * 1.5);
-                Canvas.Enabled = false;
+                RenderPicture.Enabled = false;
                 scene.PanObject = currentObject;
                 IsPan = true;
             }
@@ -615,7 +612,7 @@ namespace _3DEngine
                 {
                     ConsoleParameters.Enabled = true;
                 }
-                Canvas.Enabled = true;
+                RenderPicture.Enabled = true;
                 scene.PanObject = null;
             }
         }
@@ -1351,7 +1348,7 @@ namespace _3DEngine
             {
                 if (SaveImageDialog.ShowDialog() == DialogResult.OK)
                 {
-                    Canvas.Image.Save(SaveImageDialog.FileName);
+                    RenderPicture.Image.Save(SaveImageDialog.FileName);
                 }
             }
         }
@@ -1372,7 +1369,6 @@ namespace _3DEngine
             currentObject = null;
             ObjectsList.Items.Clear();
             PrimitivesList.Items.Clear();
-            DeleteObject.Enabled = DeletePrimitive.Enabled = AddPrimitive.Enabled = false;
             ParametersPanel.Visible = ConsoleParameters.Visible = false;
             scene.PaintObjects();
         }
@@ -1395,7 +1391,7 @@ namespace _3DEngine
                     currentObject.BasePoint.Z - Math.Max(currentObject.MaxLength + scene.Camera.NearClippingPlaneZ, 100)
                     );
                 scene.Camera.FarClippingPlaneZ = Math.Max(scene.Camera.FarClippingPlaneZ, currentObject.MaxLength * 1.5);
-                Canvas.Enabled = false;
+                RenderPicture.Enabled = false;
                 scene.PanObject = currentObject;
                 IsPan = true;
             }
@@ -1412,7 +1408,7 @@ namespace _3DEngine
                 {
                     ConsoleParameters.Enabled = true;
                 }
-                Canvas.Enabled = true;
+                RenderPicture.Enabled = true;
                 scene.PanObject = null;
                 начатьВращениеToolStripMenuItem.Text = "Начать";
             }

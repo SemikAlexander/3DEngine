@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddObject));
-            this.Add = new System.Windows.Forms.Button();
+            this.AddObj = new System.Windows.Forms.Button();
             this.ColorPicker = new System.Windows.Forms.ColorDialog();
             this.ScaleZ = new System.Windows.Forms.NumericUpDown();
             this.ScaleY = new System.Windows.Forms.NumericUpDown();
@@ -59,21 +59,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.RotateX)).BeginInit();
             this.SuspendLayout();
             // 
-            // Add
+            // AddObj
             // 
-            this.Add.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Add.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Add.Enabled = false;
-            this.Add.FlatAppearance.BorderSize = 0;
-            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add.Location = new System.Drawing.Point(0, 150);
-            this.Add.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(288, 32);
-            this.Add.TabIndex = 69;
-            this.Add.Text = "Добавить";
-            this.Add.UseVisualStyleBackColor = false;
-            this.Add.Click += new System.EventHandler(this.Button1_Click);
+            this.AddObj.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.AddObj.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddObj.Enabled = false;
+            this.AddObj.FlatAppearance.BorderSize = 0;
+            this.AddObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddObj.Location = new System.Drawing.Point(0, 150);
+            this.AddObj.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.AddObj.Name = "AddObj";
+            this.AddObj.Size = new System.Drawing.Size(288, 32);
+            this.AddObj.TabIndex = 69;
+            this.AddObj.Text = "Добавить";
+            this.AddObj.UseVisualStyleBackColor = false;
+            this.AddObj.Click += new System.EventHandler(this.Button1_Click);
             // 
             // ColorPicker
             // 
@@ -400,7 +400,7 @@
             this.Controls.Add(this.RotateLabel);
             this.Controls.Add(this.ObjectNameLabel);
             this.Controls.Add(this.ObjectName);
-            this.Controls.Add(this.Add);
+            this.Controls.Add(this.AddObj);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -422,7 +422,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button AddObj;
         private System.Windows.Forms.ColorDialog ColorPicker;
         private System.Windows.Forms.NumericUpDown ScaleZ;
         private System.Windows.Forms.NumericUpDown ScaleY;

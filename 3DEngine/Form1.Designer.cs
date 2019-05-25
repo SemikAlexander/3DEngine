@@ -47,8 +47,7 @@
             this.ObjectsLabel = new System.Windows.Forms.Label();
             this.ObjectsList = new System.Windows.Forms.ComboBox();
             this.ObjectsPanel = new System.Windows.Forms.Panel();
-            this.DeletePrimitive = new System.Windows.Forms.Button();
-            this.AddPrimitive = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.PrimitivesList = new System.Windows.Forms.ComboBox();
             this.PrimitivesLabel = new System.Windows.Forms.Label();
             this.DeleteObject = new System.Windows.Forms.Button();
@@ -96,6 +95,8 @@
             this.SecondDisplayDiagonal = new System.Windows.Forms.NumericUpDown();
             this.SecondDisplayDiagonalLabel = new System.Windows.Forms.Label();
             this.ParametersPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ColorBox = new System.Windows.Forms.PictureBox();
             this.ColorLabel = new System.Windows.Forms.Label();
             this.SegmentsBox = new System.Windows.Forms.NumericUpDown();
             this.SegmentsLabel = new System.Windows.Forms.Label();
@@ -108,6 +109,7 @@
             this.RadiusLabel = new System.Windows.Forms.Label();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.CanvasPanel = new System.Windows.Forms.Panel();
+            this.RenderPicture = new System.Windows.Forms.PictureBox();
             this.ColorPicker = new System.Windows.Forms.ColorDialog();
             this.ExportDialog = new System.Windows.Forms.SaveFileDialog();
             this.ImportDialog = new System.Windows.Forms.OpenFileDialog();
@@ -119,16 +121,12 @@
             this.отображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.каркасToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объёмноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вращениеОбъектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.начатьВращениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.камераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поворотКамерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.позиционныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Canvas = new System.Windows.Forms.PictureBox();
-            this.ColorBox = new System.Windows.Forms.PictureBox();
+            this.вращениеОбъектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.начатьВращениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -162,15 +160,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.CardReaderWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).BeginInit();
             this.ParametersPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SegmentsBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LengthBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WidthBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightBox)).BeginInit();
             this.CanvasPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTimer
@@ -373,7 +371,7 @@
             // 
             this.ObjectsLabel.AutoSize = true;
             this.ObjectsLabel.ForeColor = System.Drawing.Color.White;
-            this.ObjectsLabel.Location = new System.Drawing.Point(16, 37);
+            this.ObjectsLabel.Location = new System.Drawing.Point(16, 45);
             this.ObjectsLabel.Name = "ObjectsLabel";
             this.ObjectsLabel.Size = new System.Drawing.Size(68, 17);
             this.ObjectsLabel.TabIndex = 4;
@@ -385,7 +383,7 @@
             this.ObjectsList.BackColor = System.Drawing.SystemColors.Window;
             this.ObjectsList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ObjectsList.FormattingEnabled = true;
-            this.ObjectsList.Location = new System.Drawing.Point(89, 34);
+            this.ObjectsList.Location = new System.Drawing.Point(89, 42);
             this.ObjectsList.Name = "ObjectsList";
             this.ObjectsList.Size = new System.Drawing.Size(160, 25);
             this.ObjectsList.TabIndex = 3;
@@ -395,8 +393,6 @@
             // 
             this.ObjectsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ObjectsPanel.Controls.Add(this.label2);
-            this.ObjectsPanel.Controls.Add(this.DeletePrimitive);
-            this.ObjectsPanel.Controls.Add(this.AddPrimitive);
             this.ObjectsPanel.Controls.Add(this.PrimitivesList);
             this.ObjectsPanel.Controls.Add(this.PrimitivesLabel);
             this.ObjectsPanel.Controls.Add(this.DeleteObject);
@@ -410,46 +406,25 @@
             this.ObjectsPanel.Size = new System.Drawing.Size(316, 128);
             this.ObjectsPanel.TabIndex = 5;
             // 
-            // DeletePrimitive
+            // label2
             // 
-            this.DeletePrimitive.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.DeletePrimitive.Enabled = false;
-            this.DeletePrimitive.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.DeletePrimitive.FlatAppearance.BorderSize = 0;
-            this.DeletePrimitive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeletePrimitive.ForeColor = System.Drawing.Color.White;
-            this.DeletePrimitive.Location = new System.Drawing.Point(286, 66);
-            this.DeletePrimitive.Name = "DeletePrimitive";
-            this.DeletePrimitive.Size = new System.Drawing.Size(25, 27);
-            this.DeletePrimitive.TabIndex = 10;
-            this.DeletePrimitive.Text = "-";
-            this.DeletePrimitive.UseVisualStyleBackColor = false;
-            this.DeletePrimitive.Click += new System.EventHandler(this.DeletePrimitive_Click);
-            // 
-            // AddPrimitive
-            // 
-            this.AddPrimitive.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.AddPrimitive.Enabled = false;
-            this.AddPrimitive.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.AddPrimitive.FlatAppearance.BorderSize = 0;
-            this.AddPrimitive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddPrimitive.ForeColor = System.Drawing.Color.White;
-            this.AddPrimitive.Location = new System.Drawing.Point(255, 66);
-            this.AddPrimitive.Name = "AddPrimitive";
-            this.AddPrimitive.Size = new System.Drawing.Size(25, 27);
-            this.AddPrimitive.TabIndex = 9;
-            this.AddPrimitive.Text = "+";
-            this.AddPrimitive.UseVisualStyleBackColor = false;
-            this.AddPrimitive.Click += new System.EventHandler(this.AddPrimitive_Click);
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(129, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "ОБЪЕКТЫ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PrimitivesList
             // 
             this.PrimitivesList.BackColor = System.Drawing.SystemColors.Window;
             this.PrimitivesList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PrimitivesList.FormattingEnabled = true;
-            this.PrimitivesList.Location = new System.Drawing.Point(89, 67);
+            this.PrimitivesList.Location = new System.Drawing.Point(89, 75);
             this.PrimitivesList.Name = "PrimitivesList";
-            this.PrimitivesList.Size = new System.Drawing.Size(160, 25);
+            this.PrimitivesList.Size = new System.Drawing.Size(222, 25);
             this.PrimitivesList.TabIndex = 7;
             this.PrimitivesList.SelectedIndexChanged += new System.EventHandler(this.PrimitivesList_SelectedIndexChanged);
             // 
@@ -457,7 +432,7 @@
             // 
             this.PrimitivesLabel.AutoSize = true;
             this.PrimitivesLabel.ForeColor = System.Drawing.Color.White;
-            this.PrimitivesLabel.Location = new System.Drawing.Point(-1, 71);
+            this.PrimitivesLabel.Location = new System.Drawing.Point(-1, 79);
             this.PrimitivesLabel.Name = "PrimitivesLabel";
             this.PrimitivesLabel.Size = new System.Drawing.Size(85, 17);
             this.PrimitivesLabel.TabIndex = 8;
@@ -472,7 +447,7 @@
             this.DeleteObject.FlatAppearance.BorderSize = 0;
             this.DeleteObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteObject.ForeColor = System.Drawing.Color.White;
-            this.DeleteObject.Location = new System.Drawing.Point(286, 33);
+            this.DeleteObject.Location = new System.Drawing.Point(286, 41);
             this.DeleteObject.Name = "DeleteObject";
             this.DeleteObject.Size = new System.Drawing.Size(25, 27);
             this.DeleteObject.TabIndex = 6;
@@ -487,7 +462,7 @@
             this.AddObject.FlatAppearance.BorderSize = 0;
             this.AddObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddObject.ForeColor = System.Drawing.Color.White;
-            this.AddObject.Location = new System.Drawing.Point(255, 33);
+            this.AddObject.Location = new System.Drawing.Point(255, 41);
             this.AddObject.Name = "AddObject";
             this.AddObject.Size = new System.Drawing.Size(25, 27);
             this.AddObject.TabIndex = 5;
@@ -1320,6 +1295,29 @@
             this.ParametersPanel.TabIndex = 67;
             this.ParametersPanel.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(88, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 17);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "ПАРАМЕТРЫ ПРИМИТИВА";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ColorBox
+            // 
+            this.ColorBox.BackColor = System.Drawing.Color.LightGray;
+            this.ColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ColorBox.Enabled = false;
+            this.ColorBox.Location = new System.Drawing.Point(233, 95);
+            this.ColorBox.Name = "ColorBox";
+            this.ColorBox.Size = new System.Drawing.Size(70, 24);
+            this.ColorBox.TabIndex = 73;
+            this.ColorBox.TabStop = false;
+            this.ColorBox.Click += new System.EventHandler(this.ColorBox_Click);
+            // 
             // ColorLabel
             // 
             this.ColorLabel.ForeColor = System.Drawing.Color.White;
@@ -1512,12 +1510,27 @@
             // 
             // CanvasPanel
             // 
-            this.CanvasPanel.Controls.Add(this.Canvas);
+            this.CanvasPanel.Controls.Add(this.RenderPicture);
             this.CanvasPanel.Location = new System.Drawing.Point(0, 25);
             this.CanvasPanel.Name = "CanvasPanel";
             this.CanvasPanel.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
             this.CanvasPanel.Size = new System.Drawing.Size(636, 475);
             this.CanvasPanel.TabIndex = 9;
+            // 
+            // RenderPicture
+            // 
+            this.RenderPicture.BackColor = System.Drawing.Color.White;
+            this.RenderPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RenderPicture.Location = new System.Drawing.Point(5, 5);
+            this.RenderPicture.Name = "RenderPicture";
+            this.RenderPicture.Size = new System.Drawing.Size(631, 470);
+            this.RenderPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RenderPicture.TabIndex = 0;
+            this.RenderPicture.TabStop = false;
+            this.RenderPicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
+            this.RenderPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseDown);
+            this.RenderPicture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
+            this.RenderPicture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseUp);
             // 
             // ColorPicker
             // 
@@ -1600,22 +1613,6 @@
             this.объёмноеToolStripMenuItem.Text = "Объёмное";
             this.объёмноеToolStripMenuItem.Click += new System.EventHandler(this.ОбъёмноеToolStripMenuItem_Click);
             // 
-            // вращениеОбъектаToolStripMenuItem
-            // 
-            this.вращениеОбъектаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.начатьВращениеToolStripMenuItem});
-            this.вращениеОбъектаToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.вращениеОбъектаToolStripMenuItem.Name = "вращениеОбъектаToolStripMenuItem";
-            this.вращениеОбъектаToolStripMenuItem.Size = new System.Drawing.Size(148, 21);
-            this.вращениеОбъектаToolStripMenuItem.Text = "Вращение объекта";
-            // 
-            // начатьВращениеToolStripMenuItem
-            // 
-            this.начатьВращениеToolStripMenuItem.Name = "начатьВращениеToolStripMenuItem";
-            this.начатьВращениеToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.начатьВращениеToolStripMenuItem.Text = "Начать";
-            this.начатьВращениеToolStripMenuItem.Click += new System.EventHandler(this.НачатьВращениеToolStripMenuItem_Click);
-            // 
             // камераToolStripMenuItem
             // 
             this.камераToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1647,54 +1644,21 @@
             this.объекToolStripMenuItem.Text = "Объект";
             this.объекToolStripMenuItem.Click += new System.EventHandler(this.ОбъекToolStripMenuItem_Click);
             // 
-            // label1
+            // вращениеОбъектаToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(88, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 17);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "ПАРАМЕТРЫ ПРИМИТИВА";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.вращениеОбъектаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.начатьВращениеToolStripMenuItem});
+            this.вращениеОбъектаToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.вращениеОбъектаToolStripMenuItem.Name = "вращениеОбъектаToolStripMenuItem";
+            this.вращениеОбъектаToolStripMenuItem.Size = new System.Drawing.Size(148, 21);
+            this.вращениеОбъектаToolStripMenuItem.Text = "Вращение объекта";
             // 
-            // label2
+            // начатьВращениеToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(125, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "ОБЪЕКТЫ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Canvas
-            // 
-            this.Canvas.BackColor = System.Drawing.Color.White;
-            this.Canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Canvas.Location = new System.Drawing.Point(5, 5);
-            this.Canvas.Name = "Canvas";
-            this.Canvas.Size = new System.Drawing.Size(631, 470);
-            this.Canvas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Canvas.TabIndex = 0;
-            this.Canvas.TabStop = false;
-            this.Canvas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
-            this.Canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseDown);
-            this.Canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
-            this.Canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseUp);
-            // 
-            // ColorBox
-            // 
-            this.ColorBox.BackColor = System.Drawing.Color.LightGray;
-            this.ColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ColorBox.Enabled = false;
-            this.ColorBox.Location = new System.Drawing.Point(233, 95);
-            this.ColorBox.Name = "ColorBox";
-            this.ColorBox.Size = new System.Drawing.Size(70, 24);
-            this.ColorBox.TabIndex = 73;
-            this.ColorBox.TabStop = false;
-            this.ColorBox.Click += new System.EventHandler(this.ColorBox_Click);
+            this.начатьВращениеToolStripMenuItem.Name = "начатьВращениеToolStripMenuItem";
+            this.начатьВращениеToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.начатьВращениеToolStripMenuItem.Text = "Начать";
+            this.начатьВращениеToolStripMenuItem.Click += new System.EventHandler(this.НачатьВращениеToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -1750,16 +1714,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).EndInit();
             this.ParametersPanel.ResumeLayout(false);
             this.ParametersPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SegmentsBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LengthBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WidthBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeightBox)).EndInit();
             this.CanvasPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1767,7 +1731,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox Canvas;
+        private System.Windows.Forms.PictureBox RenderPicture;
         private System.Windows.Forms.Timer MainTimer;
         private System.Windows.Forms.Panel CameraPanel;
         private System.Windows.Forms.Label CameraTargetLabel;
@@ -1797,8 +1761,6 @@
         private System.Windows.Forms.Panel CanvasPanel;
         public System.Windows.Forms.ComboBox ObjectsList;
         private System.Windows.Forms.Label ScaleLabel;
-        private System.Windows.Forms.Button DeletePrimitive;
-        private System.Windows.Forms.Button AddPrimitive;
         public System.Windows.Forms.ComboBox PrimitivesList;
         private System.Windows.Forms.Label PrimitivesLabel;
         private System.Windows.Forms.Panel ParametersPanel;
