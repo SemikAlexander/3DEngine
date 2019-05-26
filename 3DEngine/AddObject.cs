@@ -28,8 +28,8 @@ namespace _3DEngine
                 );
             if (mainForm.scene.GetObjectByName(ObjectName.Text) == null)
             {
-                ConsoleObject sceneObject;
-                sceneObject = new ConsoleObject(ObjectName.Text);
+                TriplaneObject sceneObject;
+                sceneObject = new TriplaneObject(ObjectName.Text);
                 sceneObject.BasePoint = basePoint;
                 sceneObject.AngleX = (int)RotateX.Value;
                 sceneObject.AngleY = (int)RotateY.Value;

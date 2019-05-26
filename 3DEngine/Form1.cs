@@ -217,7 +217,7 @@ namespace _3DEngine
             PrimitivesList.SelectedIndex = 0;
             if (!currentObject.Name.Equals("Lorenz"))
             {
-                if (!(currentObject is ConsoleObject))
+                if (!(currentObject is TriplaneObject))
                 {
                     foreach (ScenePrimitive scenePrimitive in currentObject.ScenePrimitives)
                     {
@@ -227,18 +227,18 @@ namespace _3DEngine
                 }
                 else
                 {
-                    SecondDisplayDiagonal.Value = (decimal)((ConsoleObject)currentObject).SecondDisplayDiagonal;
-                    ManipulatorRadius.Value = (decimal)((ConsoleObject)currentObject).ManipulatorRadius;
-                    ManipulatorBaseRadius.Value = (decimal)((ConsoleObject)currentObject).ManipulatorBaseRadius;
-                    CylindersHeight.Value = (decimal)((ConsoleObject)currentObject).CylindersHeight;
-                    CylindersRadius.Value = (decimal)((ConsoleObject)currentObject).CylindersRadius;
-                    CrossButtonSize.Value = (decimal)((ConsoleObject)currentObject).CrossButtonSize;
-                    VolumeSpace.Value = (decimal)((ConsoleObject)currentObject).VolumeSpace;
-                    FrameThickness.Value = (decimal)((ConsoleObject)currentObject).FrameThickness;
-                    BrightnessBottomPosition.Value = (decimal)((ConsoleObject)currentObject).BrightnessBottomPosition;
-                    CardReaderWidth.Value = (decimal)((ConsoleObject)currentObject).CardReaderWidth;
-                    CardReadersCount.Value = ((ConsoleObject)currentObject).CardReadersCount;
-                    IndicatorsCount.Value = ((ConsoleObject)currentObject).IndicatorsCount;
+                    SecondDisplayDiagonal.Value = (decimal)((TriplaneObject)currentObject).SecondDisplayDiagonal;
+                    ManipulatorRadius.Value = (decimal)((TriplaneObject)currentObject).ManipulatorRadius;
+                    ManipulatorBaseRadius.Value = (decimal)((TriplaneObject)currentObject).ManipulatorBaseRadius;
+                    CylindersHeight.Value = (decimal)((TriplaneObject)currentObject).CylindersHeight;
+                    CylindersRadius.Value = (decimal)((TriplaneObject)currentObject).CylindersRadius;
+                    CrossButtonSize.Value = (decimal)((TriplaneObject)currentObject).CrossButtonSize;
+                    VolumeSpace.Value = (decimal)((TriplaneObject)currentObject).VolumeSpace;
+                    FrameThickness.Value = (decimal)((TriplaneObject)currentObject).FrameThickness;
+                    BrightnessBottomPosition.Value = (decimal)((TriplaneObject)currentObject).BrightnessBottomPosition;
+                    CardReaderWidth.Value = (decimal)((TriplaneObject)currentObject).CardReaderWidth;
+                    CardReadersCount.Value = ((TriplaneObject)currentObject).CardReadersCount;
+                    IndicatorsCount.Value = ((TriplaneObject)currentObject).IndicatorsCount;
                     ConsoleParameters.Visible = ConsoleParameters.Enabled = true;
                     ParametersPanel.Visible = ParametersPanel.Enabled = false;
                 }
@@ -605,7 +605,7 @@ namespace _3DEngine
                 IsPan = false;
                 scene.Camera = tempCamera;
                 SpacePanel.Enabled = ObjectsList.SelectedIndex >= 0;
-                if (!(currentObject is ConsoleObject))
+                if (!(currentObject is TriplaneObject))
                 {
                     ParametersPanel.Enabled = PrimitivesList.SelectedIndex >= 0;
                 }
@@ -827,74 +827,74 @@ namespace _3DEngine
 
         private void SecondDisplayDiagonal_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).SecondDisplayDiagonal = (double)SecondDisplayDiagonal.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).SecondDisplayDiagonal = (double)SecondDisplayDiagonal.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void CardReaderWidth_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).CardReaderWidth = (double)CardReaderWidth.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).CardReaderWidth = (double)CardReaderWidth.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void ManipulatorRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).ManipulatorRadius = (double)ManipulatorRadius.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).ManipulatorRadius = (double)ManipulatorRadius.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void ManipulatorBaseRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).ManipulatorBaseRadius = (double)ManipulatorBaseRadius.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).ManipulatorBaseRadius = (double)ManipulatorBaseRadius.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void CylindersHeight_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).CylindersHeight = (double)CylindersHeight.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).CylindersHeight = (double)CylindersHeight.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void CylindersRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).CylindersRadius = (double)CylindersRadius.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).CylindersRadius = (double)CylindersRadius.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void CrossButtonSize_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).CrossButtonSize = (double)CrossButtonSize.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).CrossButtonSize = (double)CrossButtonSize.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void VolumeSpace_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).VolumeSpace = (double)VolumeSpace.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).VolumeSpace = (double)VolumeSpace.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void FrameThickness_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).FrameThickness = (double)FrameThickness.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).FrameThickness = (double)FrameThickness.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void BrightnessBottomPosition_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).BrightnessBottomPosition = (double)BrightnessBottomPosition.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).BrightnessBottomPosition = (double)BrightnessBottomPosition.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void CardReadersCount_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).CardReadersCount = (int)CardReadersCount.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).CardReadersCount = (int)CardReadersCount.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void IndicatorsCount_ValueChanged(object sender, EventArgs e)
         {
-            ((ConsoleObject)currentObject).IndicatorsCount = (int)IndicatorsCount.Value;
-            ((ConsoleObject)currentObject).UpdateObject();
+            ((TriplaneObject)currentObject).IndicatorsCount = (int)IndicatorsCount.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
         }
 
         private void ExportScene_Click(object sender, EventArgs e)
@@ -957,10 +957,10 @@ namespace _3DEngine
                     {
                         XElement objectElement;
 
-                        if (sceneObject is ConsoleObject)
+                        if (sceneObject is TriplaneObject)
                         {
-                            ConsoleObject consoleObject = (ConsoleObject)sceneObject;
-                            objectElement = new XElement("console-object");
+                            TriplaneObject consoleObject = (TriplaneObject)sceneObject;
+                            objectElement = new XElement("TriplaneObject-object");
 
                             objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
                             objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
@@ -1250,7 +1250,7 @@ namespace _3DEngine
 
                     foreach (XElement consoleObjectElement in scene1.Element("objects").Elements("console-object"))
                     {
-                        ConsoleObject consoleObject = new ConsoleObject(consoleObjectElement.Attribute("name").Value);
+                        TriplaneObject consoleObject = new TriplaneObject(consoleObjectElement.Attribute("name").Value);
 
                         XElement position = consoleObjectElement.Element("position");
                         consoleObject.BasePoint = new Point3D(
@@ -1401,7 +1401,7 @@ namespace _3DEngine
                 IsPan = false;
                 scene.Camera = tempCamera;
                 SpacePanel.Enabled = ObjectsList.SelectedIndex >= 0;
-                if (!(currentObject is ConsoleObject))
+                if (!(currentObject is TriplaneObject))
                 {
                     ParametersPanel.Enabled = PrimitivesList.SelectedIndex >= 0;
                 }
@@ -1581,7 +1581,7 @@ namespace _3DEngine
 
                     foreach (XElement consoleObjectElement in scene1.Element("objects").Elements("console-object"))
                     {
-                        ConsoleObject consoleObject = new ConsoleObject(consoleObjectElement.Attribute("name").Value);
+                        TriplaneObject consoleObject = new TriplaneObject(consoleObjectElement.Attribute("name").Value);
 
                         XElement position = consoleObjectElement.Element("position");
                         consoleObject.BasePoint = new Point3D(
@@ -1695,9 +1695,9 @@ namespace _3DEngine
                     {
                         XElement objectElement;
 
-                        if (sceneObject is ConsoleObject)
+                        if (sceneObject is TriplaneObject)
                         {
-                            ConsoleObject consoleObject = (ConsoleObject)sceneObject;
+                            TriplaneObject consoleObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("console-object");
 
                             objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));

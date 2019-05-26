@@ -67,10 +67,10 @@
             this.AddObj.FlatAppearance.BorderSize = 0;
             this.AddObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddObj.ForeColor = System.Drawing.Color.White;
-            this.AddObj.Location = new System.Drawing.Point(0, 150);
+            this.AddObj.Location = new System.Drawing.Point(0, 152);
             this.AddObj.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.AddObj.Name = "AddObj";
-            this.AddObj.Size = new System.Drawing.Size(288, 32);
+            this.AddObj.Size = new System.Drawing.Size(288, 30);
             this.AddObj.TabIndex = 69;
             this.AddObj.Text = "Добавить";
             this.AddObj.UseVisualStyleBackColor = false;
@@ -235,6 +235,16 @@
             65536});
             this.PositionX.Location = new System.Drawing.Point(80, 54);
             this.PositionX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PositionX.Maximum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
+            this.PositionX.Minimum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            -2147483648});
             this.PositionX.Name = "PositionX";
             this.PositionX.Size = new System.Drawing.Size(63, 23);
             this.PositionX.TabIndex = 98;

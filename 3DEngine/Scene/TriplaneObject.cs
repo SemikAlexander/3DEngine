@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace _3DEngine
 {
-    public class ConsoleObject : SceneObject
+    public class TriplaneObject : SceneObject
     {
         public double SecondDisplayDiagonal { get; set; } = 55;
         public double ManipulatorRadius { get; set; } = 3;
@@ -18,7 +18,7 @@ namespace _3DEngine
         public int CardReadersCount { get; set; } = 1;
         public int IndicatorsCount { get; set; } = 3;
         
-        public ConsoleObject(string name) : base(name)
+        public TriplaneObject(string name) : base(name)
         {
             UpdateObject();
         }

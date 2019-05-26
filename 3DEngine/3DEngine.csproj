@@ -80,7 +80,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Scene\Camera.cs" />
-    <Compile Include="Scene\ConsoleObject.cs" />
+    <Compile Include="Scene\TriplaneObject.cs" />
     <Compile Include="Scene\Scene.cs" />
     <Compile Include="Scene\SceneObject.cs" />
     <Compile Include="Scene\ScenePrimitive.cs" />
