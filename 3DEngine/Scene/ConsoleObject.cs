@@ -27,176 +27,178 @@ namespace _3DEngine
         {
             ScenePrimitives.Clear();
 
-            ScenePrimitive bottom = new ScenePrimitive(
-                new Box(new Point3D(0, 0, 0), 90, 5, 60, Color.FromArgb(85, 85, 85)),
-                "Bottom"
+            ScenePrimitive fuselage = new ScenePrimitive(
+                new Cylinder(new Point3D(-30, 0, 0), 10, 70, 16, Color.FromArgb(211, 211, 211)),
+                "Фюзеляж"
                 );
-            ScenePrimitives.Add(bottom);
+            fuselage.AngleZ = -90;
+            ScenePrimitives.Add(fuselage);
 
-            ScenePrimitive leftRack = new ScenePrimitive(
-                new Box(new Point3D(-42.5, 5, 27.5), 5, 5, 5, Color.FromArgb(85, 85, 85)),
-                "Left Rack"
+            ScenePrimitive auxiliary1 = new ScenePrimitive(
+                new Hemisphere(new Point3D(-100, 0, 0), 10, 16, Color.FromArgb(211, 211, 211)),
+                "Вспомогательный1"
                 );
-            ScenePrimitives.Add(leftRack);
+            auxiliary1.AngleZ = -90;
+            ScenePrimitives.Add(auxiliary1);
 
-            ScenePrimitive rightRack = new ScenePrimitive(
-                new Box(new Point3D(42.5, 5, 27.5), 5, 5, 5, Color.FromArgb(85, 85, 85)),
-                "Right Rack"
+            ScenePrimitive wing1 = new ScenePrimitive(
+                new Box(new Point3D(-91.5, 13, 0), 15, 2, 100, Color.FromArgb(211, 211, 211)),
+                "Крыло1"
                 );
-            ScenePrimitives.Add(rightRack);
+            ScenePrimitives.Add(wing1);
 
-            ScenePrimitive underframe = new ScenePrimitive(
-                new Cylinder(new Point3D(-40, 7.5, 27.5), 2.5, 80, 16, Color.FromArgb(75, 75, 75)),
-                "Underframe"
+            ScenePrimitive wing2 = new ScenePrimitive(
+                new Box(new Point3D(-91, -10, 0), 15, 2, 100, Color.FromArgb(211, 211, 211)),
+                "Крыло2"
                 );
-            underframe.AngleZ = 90;
-            ScenePrimitives.Add(underframe);
+            ScenePrimitives.Add(wing2);
 
-            ScenePrimitive holder = new ScenePrimitive(
-                new Box(new Point3D(0, 10, 27.5), 80, 2.5, 1, Color.FromArgb(55, 55, 55)),
-                "Holder"
+            ScenePrimitive wing3 = new ScenePrimitive(
+                new Box(new Point3D(-91, 30, 0), 15, 2, 100, Color.FromArgb(211, 211, 211)),
+                "Крыло3"
                 );
-            ScenePrimitives.Add(holder);
+            ScenePrimitives.Add(wing3);
 
-            double displayThickness = 5 - FrameThickness;
-            double displayDepth = 30 - displayThickness / 2;
-            ScenePrimitive display = new ScenePrimitive(
-                new Box(new Point3D(0, 12.5, displayDepth), 90, 55, displayThickness, Color.FromArgb(100, 100, 100)),
-                "Screen"
+            ScenePrimitive auxiliary2 = new ScenePrimitive(
+                new Sphere(new Point3D(-108, 0, 0), 5, 16, Color.FromArgb(211, 211, 211)),
+                "Вспомогательный2"
                 );
-            ScenePrimitives.Add(display);
+            ScenePrimitives.Add(auxiliary2);
 
-            double frameDepth = 30 - displayThickness - FrameThickness / 2;
-            ScenePrimitive leftFrame = new ScenePrimitive(
-                new Box(new Point3D(-42.5, 12.5, frameDepth), 5, 55, FrameThickness, Color.FromArgb(75, 75, 75)),
-                "Left Frame"
+            ScenePrimitive screw = new ScenePrimitive(
+                new Box(new Point3D(-109.5, -2, 0), 2, 5, 45, Color.FromArgb(211, 211, 211)),
+                "Винт"
                 );
-            ScenePrimitives.Add(leftFrame);
+            ScenePrimitives.Add(screw);
 
-            ScenePrimitive rightFrame = new ScenePrimitive(
-                new Box(new Point3D(42.5, 12.5, frameDepth), 5, 55, FrameThickness, Color.FromArgb(75, 75, 75)),
-                "Right Frame"
+            ScenePrimitive support1 = new ScenePrimitive(
+                new Box(new Point3D(-92, -9, -30), 2, 42, 2, Color.FromArgb(211, 211, 211)),
+                "Поддержка1"
                 );
-            ScenePrimitives.Add(rightFrame);
+            ScenePrimitives.Add(support1);
 
-            ScenePrimitive topFrame = new ScenePrimitive(
-                new Box(new Point3D(0, 62.5, frameDepth), 80, 5, FrameThickness, Color.FromArgb(75, 75, 75)),
-                "Top Frame"
+            ScenePrimitive support2 = new ScenePrimitive(
+                new Box(new Point3D(-92, -9, 30), 2, 42, 2, Color.FromArgb(211, 211, 211)),
+                "Поддержка2"
                 );
-            ScenePrimitives.Add(topFrame);
+            ScenePrimitives.Add(support2);
 
-            ScenePrimitive bottomFrame = new ScenePrimitive(
-                new Box(new Point3D(0, 12.5, frameDepth), 80, 5, FrameThickness, Color.FromArgb(75, 75, 75)),
-                "Bottom Frame"
+            ScenePrimitive support3 = new ScenePrimitive(
+                new Box(new Point3D(-92, 6, -2.5), 2, 26, 2, Color.FromArgb(211, 211, 211)),
+                "Поддержка3"
                 );
-            ScenePrimitives.Add(bottomFrame);
+            ScenePrimitives.Add(support3);
 
-            double volumeHeight = 5;
-            double displayTop = display.Primitive.BasePoint.Y + ((Box)display.Primitive).Height;
-            double volumeBottom = displayTop - volumeHeight - 10;
-            ScenePrimitive volumeUp = new ScenePrimitive(
-                new Box(new Point3D(-45.5, volumeBottom, 28.5), 1, 5, 1, Color.FromArgb(155, 155, 155)),
-                "Volume Up"
+            ScenePrimitive support4 = new ScenePrimitive(
+                new Box(new Point3D(-92, 6, 2.5), 2, 26, 2, Color.FromArgb(211, 211, 211)),
+                "Поддержка4"
                 );
-            ScenePrimitives.Add(volumeUp);
+            ScenePrimitives.Add(support4);
 
-            volumeBottom = volumeBottom - (volumeHeight + VolumeSpace);
-            ScenePrimitive volumeDown = new ScenePrimitive(
-                new Box(new Point3D(-45.5, volumeBottom, 28.5), 1, 5, 1, Color.FromArgb(155, 155, 155)),
-                "Volume Down"
+            ScenePrimitive bearingChassis1 = new ScenePrimitive(
+                new Box(new Point3D(-94, -25, 5), 2, 17, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси1"
                 );
-            ScenePrimitives.Add(volumeDown);
+            bearingChassis1.AngleZ = -20;
+            ScenePrimitives.Add(bearingChassis1);
 
-            double displayBottom = display.Primitive.BasePoint.Y;
-            double brightnessBottom = displayBottom + BrightnessBottomPosition;
-            ScenePrimitive brightness = new ScenePrimitive(
-                new Box(new Point3D(-45.5, brightnessBottom, 28.5), 1, 10, 1, Color.FromArgb(155, 155, 155)),
-                "Brightness"
+            ScenePrimitive bearingChassis2 = new ScenePrimitive(
+                new Box(new Point3D(-94, -25, -5), 2, 17, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси2"
                 );
-            ScenePrimitives.Add(brightness);
+            bearingChassis2.AngleZ = -20;
+            ScenePrimitives.Add(bearingChassis2);
 
-            double secondDisplayWidth = Math.Sqrt(Math.Pow(SecondDisplayDiagonal, 2) / 2);
-            ScenePrimitive secondDisplay = new ScenePrimitive(
-                new Box(new Point3D(0, 5, -2.5), secondDisplayWidth, 1, secondDisplayWidth, Color.FromArgb(75, 75, 75)),
-                "Second Screen"
+            ScenePrimitive bearingChassis3 = new ScenePrimitive(
+                new Box(new Point3D(-90, -25, -4.5), 2, 17, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси3"
                 );
-            ScenePrimitives.Add(secondDisplay);
+            bearingChassis3.AngleZ = 20;
+            ScenePrimitives.Add(bearingChassis3);
 
-            ScenePrimitive cylinderUp = new ScenePrimitive(
-                new Cylinder(new Point3D(32.5, 5, -10), CylindersRadius, CylindersHeight, 16, Color.FromArgb(155, 155, 155)),
-                "Cylinder Up"
+            ScenePrimitive bearingChassis4 = new ScenePrimitive(
+                new Box(new Point3D(-90, -25, 4), 2, 17, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси4"
                 );
-            ScenePrimitives.Add(cylinderUp);
+            bearingChassis4.AngleZ = 20;
+            ScenePrimitives.Add(bearingChassis4);
 
-            ScenePrimitive cylinderDown = new ScenePrimitive(
-                new Cylinder(new Point3D(32.5, 5, 0), CylindersRadius, CylindersHeight, 16, Color.FromArgb(155, 155, 155)),
-                "Cylinder Down"
+            ScenePrimitive chassis1 = new ScenePrimitive(
+                new Cylinder(new Point3D(-92, -27, -4), 7, 2, 16, Color.FromArgb(211, 211, 211)),
+                "Шасси1"
                 );
-            ScenePrimitives.Add(cylinderDown);
+            chassis1.AngleX = 90;
+            ScenePrimitives.Add(chassis1);
 
-            ScenePrimitive cylinderLeft = new ScenePrimitive(
-                new Cylinder(new Point3D(27.5, 5, -5), CylindersRadius, CylindersHeight, 16, Color.FromArgb(155, 155, 155)),
-                "Cylinder Left"
+            ScenePrimitive chassis2 = new ScenePrimitive(
+                new Cylinder(new Point3D(-92, -27, 6), 7, 2, 16, Color.FromArgb(211, 211, 211)),
+                "Шасси2"
                 );
-            ScenePrimitives.Add(cylinderLeft);
+            chassis2.AngleX = 90;
+            ScenePrimitives.Add(chassis2);
 
-            ScenePrimitive cylinderRight = new ScenePrimitive(
-                new Cylinder(new Point3D(37.5, 5, -5), CylindersRadius, CylindersHeight, 16, Color.FromArgb(155, 155, 155)),
-                "Cylinder Right"
+            ScenePrimitive bearingChassis5 = new ScenePrimitive(
+                new Box(new Point3D(-29, -18, 0), 2, 9, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси5"
                 );
-            ScenePrimitives.Add(cylinderRight);
+            bearingChassis5.AngleZ = -15;
+            ScenePrimitives.Add(bearingChassis5);
 
-            ScenePrimitive crossMiddle = new ScenePrimitive(
-                new Box(new Point3D(-32.5, 5, 10), CrossButtonSize * 3, 2, CrossButtonSize, Color.FromArgb(155, 155, 155)),
-                "Cross Middle"
+            ScenePrimitive chassis3 = new ScenePrimitive(
+                new Cylinder(new Point3D(-29, -17, 0), 4, 2, 16, Color.FromArgb(211, 211, 211)),
+                "Шасси3"
                 );
-            ScenePrimitives.Add(crossMiddle);
+            chassis3.AngleX = 90;
+            ScenePrimitives.Add(chassis3);
 
-            ScenePrimitive crossTop = new ScenePrimitive(
-                new Box(new Point3D(-32.5, 5, 10 + CrossButtonSize), CrossButtonSize, 2, CrossButtonSize, crossMiddle.Primitive.Color),
-                "Cross Top"
+            ScenePrimitive bearingChassis6 = new ScenePrimitive(
+                new Box(new Point3D(-92, -27, 5), 2, 9, 2, Color.FromArgb(211, 211, 211)),
+                "ОпораШасси6"
                 );
-            ScenePrimitives.Add(crossTop);
+            bearingChassis6.AngleX = 90;
+            ScenePrimitives.Add(bearingChassis6);
 
-            ScenePrimitive crossBottom = new ScenePrimitive(
-                new Box(new Point3D(-32.5, 5, 10 - CrossButtonSize), CrossButtonSize, 2, CrossButtonSize, crossMiddle.Primitive.Color),
-                "Cross Bottom"
+            ScenePrimitive tail1 = new ScenePrimitive(
+                new Cylinder(new Point3D(-30, 3.5, 0), 6, 30, 16, Color.FromArgb(211, 211, 211)),
+                "Хвост1"
                 );
-            ScenePrimitives.Add(crossBottom);
+            tail1.AngleZ = 79;
+            ScenePrimitives.Add(tail1);
 
-            ScenePrimitive hemisphereBase = new ScenePrimitive(
-                new Cylinder(new Point3D(-32.5, 5, -15), ManipulatorBaseRadius, 1, 16, Color.FromArgb(155, 155, 155)),
-                "Hemisphere Base"
+            ScenePrimitive tail2 = new ScenePrimitive(
+                new Hemisphere(new Point3D(-0.5, 9.5, 0), 6, 16, Color.FromArgb(211, 211, 211)),
+                "Хвост2"
                 );
-            ScenePrimitives.Add(hemisphereBase);
+            tail2.AngleZ = 75;
+            ScenePrimitives.Add(tail2);
 
-            ScenePrimitive hemisphere = new ScenePrimitive(
-                new Hemisphere(new Point3D(-32.5, 6, -15), ManipulatorRadius, 24, Color.FromArgb(100, 100, 100), false),
-                "Hemisphere"
+            ScenePrimitive auxiliary3 = new ScenePrimitive(
+                new Sphere(new Point3D(-29, 0, 0), 10, 16, Color.FromArgb(211, 211, 211)),
+                "Вспомогательный3"
                 );
-            ScenePrimitives.Add(hemisphere);
+            ScenePrimitives.Add(auxiliary3);
 
-            double readerLeft = -35;
-            for (int i = 0; i < CardReadersCount; ++i)
-            {
-                ScenePrimitive reader = new ScenePrimitive(
-                    new Box(new Point3D(readerLeft + CardReaderWidth / 2, 1, -30.5), CardReaderWidth, 3, 1, Color.FromArgb(155, 155, 155)),
-                    $"Reader-{i}"
+            ScenePrimitive tailWing1 = new ScenePrimitive(
+                new Box(new Point3D(-14, 7, 20), 20, 40, 2, Color.FromArgb(211, 211, 211)),
+                "КрылоХвоста1"
                 );
-                ScenePrimitives.Add(reader);
-                readerLeft += CardReaderWidth + 5;
-            }
+            tailWing1.AngleX = 90;
+            tailWing1.AngleY = 10;
+            ScenePrimitives.Add(tailWing1);
 
-            double indicatorLeft = -(IndicatorsCount + (IndicatorsCount - 1) * 3) / 2;
-            for (int i = 0; i < IndicatorsCount; ++i)
-            {
-                ScenePrimitive indicator = new ScenePrimitive(
-                    new Box(new Point3D(indicatorLeft + 0.5, 5, -28.5), 1, 1, 3, Color.FromArgb(55, 55, 55)),
-                    $"Indicator-{i}"
-                    );
-                ScenePrimitives.Add(indicator);
-                indicatorLeft += 4;
-            }
+            ScenePrimitive tailWing2 = new ScenePrimitive(
+                new Box(new Point3D(-12, 2, 0), 20, 26, 2, Color.FromArgb(211, 211, 211)),
+                "КрылоХвоста2"
+                );
+            tailWing2.AngleZ = -11;
+            ScenePrimitives.Add(tailWing2);
+
+            ScenePrimitive sitPlace = new ScenePrimitive(
+                new Hemisphere(new Point3D(-73.5, 10, 0), 10, 16, Color.FromArgb(0, 0, 0)),
+                "Сиденье"
+                );
+            sitPlace.AngleX = 180;
+            ScenePrimitives.Add(sitPlace);
         }
     }
 }

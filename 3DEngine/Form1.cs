@@ -381,6 +381,7 @@ namespace _3DEngine
             RadiusBox.Value = WidthBox.Value = HeightBox.Value = LengthBox.Value = 25;
             SegmentsBox.Value = 16;
             ColorBox.BackColor = Color.LightGray;
+            ParametersPanel.Visible = ParametersPanel.Enabled = ColorBox.Enabled = PrimitivesList.SelectedIndex != 0;
             if (PrimitivesList.SelectedIndex == 0)
             {
                 currentPrimitive = null;
@@ -1808,7 +1809,7 @@ namespace _3DEngine
                     }
                     scene1.Add(objects);
 
-                    document.Add(scene);
+                    document.Add(scene1);
                     //document.Save(ExportDialog.FileName);
                 }
                 catch (Exception exception)
