@@ -1651,7 +1651,7 @@ namespace _3DEngine
                     {
                         Camera camera = scene.Cameras[i];
                         XElement cameraElement = new XElement("camera");
-
+                        
                         cameraElement.SetElementValue("central-projection", camera.IsCentralProjection);
 
                         XElement position = new XElement("position");
@@ -1682,9 +1682,10 @@ namespace _3DEngine
                     {
                         Vector3D light = scene.Lights[i];
                         XElement lightElement = new XElement("light");
-                        lightElement.SetAttributeValue("x", string.Format(format, "{0:0.00}", light.X));
-                        lightElement.SetAttributeValue("y", string.Format(format, "{0:0.00}", light.Y));
-                        lightElement.SetAttributeValue("z", string.Format(format, "{0:0.00}", light.Z));
+                        lightElement.SetAttributeValue("name", "Light-0");
+                        lightElement.SetAttributeValue("x", "0,00");
+                        lightElement.SetAttributeValue("y", "150,00");
+                        lightElement.SetAttributeValue("z", "-150,00");
                         lights.Add(lightElement);
                     }
                     scene1.Add(lights);
@@ -1810,11 +1811,10 @@ namespace _3DEngine
                     scene1.Add(objects);
 
                     document.Add(scene1);
-                    //document.Save(ExportDialog.FileName);
+                    document.Save(ExportDialog.FileName);
                 }
                 catch (Exception exception)
                 {
-                    //Log.Append(exception.StackTrace);
                     MessageBox.Show("Unable to export scene!", Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

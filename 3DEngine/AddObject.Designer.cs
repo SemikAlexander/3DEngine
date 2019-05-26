@@ -66,6 +66,7 @@
             this.AddObj.Enabled = false;
             this.AddObj.FlatAppearance.BorderSize = 0;
             this.AddObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddObj.ForeColor = System.Drawing.Color.White;
             this.AddObj.Location = new System.Drawing.Point(0, 150);
             this.AddObj.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.AddObj.Name = "AddObj";

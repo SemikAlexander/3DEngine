@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scene>
+  <cameras>
+    <camera>
+      <central-projection>true</central-projection>
+      <position x="-254,78" y="23,37" z="-75,78" />
+      <target x="-15,64" y="10,78" z="93,55" />
+      <clipping-planes near="10" far="1000" />
+      <fov>90</fov>
+    </camera>
+  </cameras>
+  <lights>
+    <light name="Light-0" x="0,00" y="150,00" z="-150,00" />
+  </lights>
+  <objects>
+    <scene-object name="Триплан">
+      <scene-primitives>
+        <scene-primitive name="Фюзеляж">
+          <rotate x="0" y="0" z="-90" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="cylinder">
+            <base-point x="-30,00" y="0,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <radius>10,00</radius>
+            <height>70,00</height>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Вспомогательный1">
+          <rotate x="0" y="0" z="-90" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="hemisphere">
+            <base-point x="-100,00" y="0,00" z="0,00" />
+            <color r="211" g="211" b="211" />
+            <radius>10,00</radius>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Крыло1">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-91,50" y="13,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <width>15,00</width>
+            <height>2,00</height>
+            <length>100,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Крыло2">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-91,00" y="-10,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <width>15,00</width>
+            <height>2,00</height>
+            <length>100,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Крыло3">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-91,00" y="30,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <width>15,00</width>
+            <height>2,00</height>
+            <length>100,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Вспомогательный2">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="sphere">
+            <base-point x="-108,00" y="0,00" z="0,00" />
+            <color r="211" g="211" b="211" />
+            <radius>5,00</radius>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Винт">
+          <rotate x="-33" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-109,50" y="-2,00" z="0,00" />
+            <color r="0" g="0" b="0" />
+            <width>2,00</width>
+            <height>5,00</height>
+            <length>45,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Поддержка1">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-92,00" y="-9,00" z="-30,00" />
+            <color r="255" g="0" b="0" />
+            <width>2,00</width>
+            <height>42,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Поддержка2">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-92,00" y="-9,00" z="30,00" />
+            <color r="255" g="0" b="0" />
+            <width>2,00</width>
+            <height>42,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Поддержка3">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-92,00" y="6,00" z="-2,50" />
+            <color r="255" g="0" b="0" />
+            <width>2,00</width>
+            <height>26,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Поддержка4">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-92,00" y="6,00" z="2,50" />
+            <color r="255" g="0" b="0" />
+            <width>2,00</width>
+            <height>26,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси1">
+          <rotate x="0" y="0" z="-20" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-94,00" y="-25,00" z="5,00" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>17,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси2">
+          <rotate x="0" y="0" z="-20" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-94,00" y="-25,00" z="-5,00" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>17,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси3">
+          <rotate x="0" y="0" z="20" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-90,00" y="-25,00" z="-4,50" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>17,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси4">
+          <rotate x="0" y="0" z="20" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-90,00" y="-25,00" z="4,00" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>17,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Шасси1">
+          <rotate x="90" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="cylinder">
+            <base-point x="-92,00" y="-27,00" z="-4,00" />
+            <color r="0" g="0" b="0" />
+            <radius>7,00</radius>
+            <height>2,00</height>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Шасси2">
+          <rotate x="90" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="cylinder">
+            <base-point x="-92,00" y="-27,00" z="6,00" />
+            <color r="0" g="0" b="0" />
+            <radius>7,00</radius>
+            <height>2,00</height>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси5">
+          <rotate x="0" y="0" z="-15" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-29,00" y="-18,00" z="0,00" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>9,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Шасси3">
+          <rotate x="90" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="cylinder">
+            <base-point x="-29,00" y="-17,00" z="0,00" />
+            <color r="0" g="0" b="0" />
+            <radius>4,00</radius>
+            <height>2,00</height>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="ОпораШасси6">
+          <rotate x="90" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-92,00" y="-27,00" z="5,00" />
+            <color r="211" g="211" b="211" />
+            <width>2,00</width>
+            <height>9,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Хвост1">
+          <rotate x="0" y="0" z="79" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="cylinder">
+            <base-point x="-30,00" y="3,50" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <radius>6,00</radius>
+            <height>30,00</height>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Хвост2">
+          <rotate x="0" y="0" z="75" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="hemisphere">
+            <base-point x="-0,50" y="9,50" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <radius>6,00</radius>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Вспомогательный3">
+          <rotate x="0" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="sphere">
+            <base-point x="-29,00" y="0,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <radius>10,00</radius>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="КрылоХвоста1">
+          <rotate x="90" y="10" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-14,00" y="7,00" z="20,00" />
+            <color r="255" g="0" b="0" />
+            <width>20,00</width>
+            <height>40,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="КрылоХвоста2">
+          <rotate x="0" y="0" z="-11" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="box">
+            <base-point x="-12,00" y="2,00" z="0,00" />
+            <color r="255" g="0" b="0" />
+            <width>20,00</width>
+            <height>26,00</height>
+            <length>2,00</length>
+          </primitive>
+        </scene-primitive>
+        <scene-primitive name="Сиденье">
+          <rotate x="180" y="0" z="0" />
+          <scale x="1,00" y="1,00" z="1,00" />
+          <primitive type="hemisphere">
+            <base-point x="-73,50" y="10,00" z="0,00" />
+            <color r="0" g="0" b="0" />
+            <radius>10,00</radius>
+            <segments-count>16</segments-count>
+          </primitive>
+        </scene-primitive>
+      </scene-primitives>
+      <position x="45,00" y="0,00" z="0,00" />
+      <rotate x="35" y="0" z="0" />
+      <scale x="1,00" y="1,00" z="1,00" />
+    </scene-object>
+    <console-object name="Враг">
+      <second-screen-diagonal>55,00</second-screen-diagonal>
+      <manipulator-radius>3,00</manipulator-radius>
+      <manipulator-base-radius>5,00</manipulator-base-radius>
+      <cylinders-height>2,50</cylinders-height>
+      <cylinders-radius>2,50</cylinders-radius>
+      <cross-button-size>5,00</cross-button-size>
+      <volume-space>1,00</volume-space>
+      <frame-thickness>1,00</frame-thickness>
+      <brightness-bottom-position>15,00</brightness-bottom-position>
+      <card-reader-width>15,00</card-reader-width>
+      <card-readers-count>1</card-readers-count>
+      <indicators-count>3</indicators-count>
+      <position x="-135,00" y="0,00" z="0,00" />
+      <rotate x="65" y="0" z="0" />
+      <scale x="1,00" y="1,00" z="1,00" />
+    </console-object>
+  </objects>
+</scene>
