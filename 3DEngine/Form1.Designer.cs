@@ -70,17 +70,9 @@
             this.RotateLabel = new System.Windows.Forms.Label();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.ConsoleParameters = new System.Windows.Forms.Panel();
-            this.IndicatorsCount = new System.Windows.Forms.NumericUpDown();
-            this.IndicatorsCountLabel = new System.Windows.Forms.Label();
             this.CylindersRadius = new System.Windows.Forms.NumericUpDown();
             this.CylindersRadiusLabel = new System.Windows.Forms.Label();
-            this.CardReadersCount = new System.Windows.Forms.NumericUpDown();
-            this.CardReadersCountLabel = new System.Windows.Forms.Label();
-            this.BrightnessBottomPosition = new System.Windows.Forms.NumericUpDown();
-            this.BrightnessBottomPositionLabel = new System.Windows.Forms.Label();
-            this.FrameThickness = new System.Windows.Forms.NumericUpDown();
             this.CrossButtonSize = new System.Windows.Forms.NumericUpDown();
-            this.FrameThicknessLabel = new System.Windows.Forms.Label();
             this.CrossButtonSizeLabel = new System.Windows.Forms.Label();
             this.VolumeSpace = new System.Windows.Forms.NumericUpDown();
             this.VolumeSpaceLabel = new System.Windows.Forms.Label();
@@ -90,8 +82,6 @@
             this.ManipulatorBaseRadiusLabel = new System.Windows.Forms.Label();
             this.ManipulatorRadius = new System.Windows.Forms.NumericUpDown();
             this.ManipulatorRadiusLabel = new System.Windows.Forms.Label();
-            this.CardReaderWidth = new System.Windows.Forms.NumericUpDown();
-            this.CardReaderWidthLabel = new System.Windows.Forms.Label();
             this.SecondDisplayDiagonal = new System.Windows.Forms.NumericUpDown();
             this.SecondDisplayDiagonalLabel = new System.Windows.Forms.Label();
             this.ParametersPanel = new System.Windows.Forms.Panel();
@@ -125,8 +115,6 @@
             this.поворотКамерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.позиционныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вращениеОбъектаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.начатьВращениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -147,17 +135,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.RotateX)).BeginInit();
             this.ControlPanel.SuspendLayout();
             this.ConsoleParameters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.IndicatorsCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CylindersRadius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardReadersCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BrightnessBottomPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FrameThickness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrossButtonSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeSpace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CylindersHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManipulatorBaseRadius)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManipulatorRadius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardReaderWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).BeginInit();
             this.ParametersPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
@@ -791,17 +774,9 @@
             // ConsoleParameters
             // 
             this.ConsoleParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConsoleParameters.Controls.Add(this.IndicatorsCount);
-            this.ConsoleParameters.Controls.Add(this.IndicatorsCountLabel);
             this.ConsoleParameters.Controls.Add(this.CylindersRadius);
             this.ConsoleParameters.Controls.Add(this.CylindersRadiusLabel);
-            this.ConsoleParameters.Controls.Add(this.CardReadersCount);
-            this.ConsoleParameters.Controls.Add(this.CardReadersCountLabel);
-            this.ConsoleParameters.Controls.Add(this.BrightnessBottomPosition);
-            this.ConsoleParameters.Controls.Add(this.BrightnessBottomPositionLabel);
-            this.ConsoleParameters.Controls.Add(this.FrameThickness);
             this.ConsoleParameters.Controls.Add(this.CrossButtonSize);
-            this.ConsoleParameters.Controls.Add(this.FrameThicknessLabel);
             this.ConsoleParameters.Controls.Add(this.CrossButtonSizeLabel);
             this.ConsoleParameters.Controls.Add(this.VolumeSpace);
             this.ConsoleParameters.Controls.Add(this.VolumeSpaceLabel);
@@ -811,54 +786,16 @@
             this.ConsoleParameters.Controls.Add(this.ManipulatorBaseRadiusLabel);
             this.ConsoleParameters.Controls.Add(this.ManipulatorRadius);
             this.ConsoleParameters.Controls.Add(this.ManipulatorRadiusLabel);
-            this.ConsoleParameters.Controls.Add(this.CardReaderWidth);
-            this.ConsoleParameters.Controls.Add(this.CardReaderWidthLabel);
             this.ConsoleParameters.Controls.Add(this.SecondDisplayDiagonal);
             this.ConsoleParameters.Controls.Add(this.SecondDisplayDiagonalLabel);
             this.ConsoleParameters.Enabled = false;
-            this.ConsoleParameters.Location = new System.Drawing.Point(12, 273);
+            this.ConsoleParameters.Location = new System.Drawing.Point(7, 298);
             this.ConsoleParameters.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ConsoleParameters.Name = "ConsoleParameters";
             this.ConsoleParameters.Padding = new System.Windows.Forms.Padding(5);
-            this.ConsoleParameters.Size = new System.Drawing.Size(629, 199);
+            this.ConsoleParameters.Size = new System.Drawing.Size(629, 146);
             this.ConsoleParameters.TabIndex = 68;
             this.ConsoleParameters.Visible = false;
-            // 
-            // IndicatorsCount
-            // 
-            this.IndicatorsCount.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.IndicatorsCount.ForeColor = System.Drawing.Color.White;
-            this.IndicatorsCount.Location = new System.Drawing.Point(555, 163);
-            this.IndicatorsCount.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.IndicatorsCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.IndicatorsCount.Name = "IndicatorsCount";
-            this.IndicatorsCount.Size = new System.Drawing.Size(70, 23);
-            this.IndicatorsCount.TabIndex = 92;
-            this.IndicatorsCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.IndicatorsCount.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.IndicatorsCount.ValueChanged += new System.EventHandler(this.IndicatorsCount_ValueChanged);
-            // 
-            // IndicatorsCountLabel
-            // 
-            this.IndicatorsCountLabel.ForeColor = System.Drawing.Color.White;
-            this.IndicatorsCountLabel.Location = new System.Drawing.Point(328, 163);
-            this.IndicatorsCountLabel.Name = "IndicatorsCountLabel";
-            this.IndicatorsCountLabel.Size = new System.Drawing.Size(221, 24);
-            this.IndicatorsCountLabel.TabIndex = 93;
-            this.IndicatorsCountLabel.Text = "Indicators count (1-5):";
-            this.IndicatorsCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CylindersRadius
             // 
@@ -870,7 +807,7 @@
             0,
             0,
             65536});
-            this.CylindersRadius.Location = new System.Drawing.Point(236, 132);
+            this.CylindersRadius.Location = new System.Drawing.Point(554, 39);
             this.CylindersRadius.Maximum = new decimal(new int[] {
             25,
             0,
@@ -894,118 +831,20 @@
             // 
             // CylindersRadiusLabel
             // 
+            this.CylindersRadiusLabel.AutoSize = true;
             this.CylindersRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersRadiusLabel.Location = new System.Drawing.Point(9, 132);
+            this.CylindersRadiusLabel.Location = new System.Drawing.Point(422, 41);
             this.CylindersRadiusLabel.Name = "CylindersRadiusLabel";
-            this.CylindersRadiusLabel.Size = new System.Drawing.Size(221, 24);
+            this.CylindersRadiusLabel.Size = new System.Drawing.Size(125, 17);
             this.CylindersRadiusLabel.TabIndex = 91;
-            this.CylindersRadiusLabel.Text = "Cylinders radius (1.5-2.5):";
+            this.CylindersRadiusLabel.Text = "Ширина лопасти:";
             this.CylindersRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // CardReadersCount
-            // 
-            this.CardReadersCount.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CardReadersCount.ForeColor = System.Drawing.Color.White;
-            this.CardReadersCount.Location = new System.Drawing.Point(555, 132);
-            this.CardReadersCount.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.CardReadersCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CardReadersCount.Name = "CardReadersCount";
-            this.CardReadersCount.Size = new System.Drawing.Size(70, 23);
-            this.CardReadersCount.TabIndex = 88;
-            this.CardReadersCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CardReadersCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CardReadersCount.ValueChanged += new System.EventHandler(this.CardReadersCount_ValueChanged);
-            // 
-            // CardReadersCountLabel
-            // 
-            this.CardReadersCountLabel.ForeColor = System.Drawing.Color.White;
-            this.CardReadersCountLabel.Location = new System.Drawing.Point(328, 132);
-            this.CardReadersCountLabel.Name = "CardReadersCountLabel";
-            this.CardReadersCountLabel.Size = new System.Drawing.Size(221, 24);
-            this.CardReadersCountLabel.TabIndex = 89;
-            this.CardReadersCountLabel.Text = "Card readers count (1-3):";
-            this.CardReadersCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // BrightnessBottomPosition
-            // 
-            this.BrightnessBottomPosition.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.BrightnessBottomPosition.ForeColor = System.Drawing.Color.White;
-            this.BrightnessBottomPosition.Location = new System.Drawing.Point(555, 70);
-            this.BrightnessBottomPosition.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.BrightnessBottomPosition.Name = "BrightnessBottomPosition";
-            this.BrightnessBottomPosition.Size = new System.Drawing.Size(70, 23);
-            this.BrightnessBottomPosition.TabIndex = 86;
-            this.BrightnessBottomPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BrightnessBottomPosition.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.BrightnessBottomPosition.ValueChanged += new System.EventHandler(this.BrightnessBottomPosition_ValueChanged);
-            // 
-            // BrightnessBottomPositionLabel
-            // 
-            this.BrightnessBottomPositionLabel.ForeColor = System.Drawing.Color.White;
-            this.BrightnessBottomPositionLabel.Location = new System.Drawing.Point(328, 70);
-            this.BrightnessBottomPositionLabel.Name = "BrightnessBottomPositionLabel";
-            this.BrightnessBottomPositionLabel.Size = new System.Drawing.Size(221, 24);
-            this.BrightnessBottomPositionLabel.TabIndex = 87;
-            this.BrightnessBottomPositionLabel.Text = "Brightness bottom position (0-15):";
-            this.BrightnessBottomPositionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // FrameThickness
-            // 
-            this.FrameThickness.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.FrameThickness.DecimalPlaces = 1;
-            this.FrameThickness.ForeColor = System.Drawing.Color.White;
-            this.FrameThickness.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.FrameThickness.Location = new System.Drawing.Point(555, 39);
-            this.FrameThickness.Maximum = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.FrameThickness.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.FrameThickness.Name = "FrameThickness";
-            this.FrameThickness.Size = new System.Drawing.Size(70, 23);
-            this.FrameThickness.TabIndex = 80;
-            this.FrameThickness.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.FrameThickness.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.FrameThickness.ValueChanged += new System.EventHandler(this.FrameThickness_ValueChanged);
             // 
             // CrossButtonSize
             // 
             this.CrossButtonSize.BackColor = System.Drawing.SystemColors.HotTrack;
             this.CrossButtonSize.ForeColor = System.Drawing.Color.White;
-            this.CrossButtonSize.Location = new System.Drawing.Point(236, 163);
+            this.CrossButtonSize.Location = new System.Drawing.Point(554, 70);
             this.CrossButtonSize.Maximum = new decimal(new int[] {
             7,
             0,
@@ -1027,31 +866,22 @@
             0});
             this.CrossButtonSize.ValueChanged += new System.EventHandler(this.CrossButtonSize_ValueChanged);
             // 
-            // FrameThicknessLabel
-            // 
-            this.FrameThicknessLabel.ForeColor = System.Drawing.Color.White;
-            this.FrameThicknessLabel.Location = new System.Drawing.Point(328, 39);
-            this.FrameThicknessLabel.Name = "FrameThicknessLabel";
-            this.FrameThicknessLabel.Size = new System.Drawing.Size(221, 24);
-            this.FrameThicknessLabel.TabIndex = 81;
-            this.FrameThicknessLabel.Text = "Frame thickness (1-4):";
-            this.FrameThicknessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // CrossButtonSizeLabel
             // 
+            this.CrossButtonSizeLabel.AutoSize = true;
             this.CrossButtonSizeLabel.ForeColor = System.Drawing.Color.White;
-            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(9, 163);
+            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(370, 72);
             this.CrossButtonSizeLabel.Name = "CrossButtonSizeLabel";
-            this.CrossButtonSizeLabel.Size = new System.Drawing.Size(221, 24);
+            this.CrossButtonSizeLabel.Size = new System.Drawing.Size(181, 17);
             this.CrossButtonSizeLabel.TabIndex = 85;
-            this.CrossButtonSizeLabel.Text = "Cross button size (3-7):";
+            this.CrossButtonSizeLabel.Text = "Ширина кабинки лётчика:";
             this.CrossButtonSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // VolumeSpace
             // 
             this.VolumeSpace.BackColor = System.Drawing.SystemColors.HotTrack;
             this.VolumeSpace.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpace.Location = new System.Drawing.Point(555, 8);
+            this.VolumeSpace.Location = new System.Drawing.Point(390, 104);
             this.VolumeSpace.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1075,12 +905,13 @@
             // 
             // VolumeSpaceLabel
             // 
+            this.VolumeSpaceLabel.AutoSize = true;
             this.VolumeSpaceLabel.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpaceLabel.Location = new System.Drawing.Point(328, 8);
+            this.VolumeSpaceLabel.Location = new System.Drawing.Point(168, 108);
             this.VolumeSpaceLabel.Name = "VolumeSpaceLabel";
-            this.VolumeSpaceLabel.Size = new System.Drawing.Size(221, 24);
+            this.VolumeSpaceLabel.Size = new System.Drawing.Size(216, 17);
             this.VolumeSpaceLabel.TabIndex = 79;
-            this.VolumeSpaceLabel.Text = "Space between volume (1-5):";
+            this.VolumeSpaceLabel.Text = "Толщина вертикального крыла:";
             this.VolumeSpaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CylindersHeight
@@ -1093,7 +924,7 @@
             0,
             0,
             65536});
-            this.CylindersHeight.Location = new System.Drawing.Point(236, 101);
+            this.CylindersHeight.Location = new System.Drawing.Point(554, 8);
             this.CylindersHeight.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1117,19 +948,20 @@
             // 
             // CylindersHeightLabel
             // 
+            this.CylindersHeightLabel.AutoSize = true;
             this.CylindersHeightLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersHeightLabel.Location = new System.Drawing.Point(9, 101);
+            this.CylindersHeightLabel.Location = new System.Drawing.Point(387, 10);
             this.CylindersHeightLabel.Name = "CylindersHeightLabel";
-            this.CylindersHeightLabel.Size = new System.Drawing.Size(221, 24);
+            this.CylindersHeightLabel.Size = new System.Drawing.Size(160, 17);
             this.CylindersHeightLabel.TabIndex = 83;
-            this.CylindersHeightLabel.Text = "Cylinders height (1.5-5):";
+            this.CylindersHeightLabel.Text = "Радиус колеса шасси:";
             this.CylindersHeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ManipulatorBaseRadius
             // 
             this.ManipulatorBaseRadius.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ManipulatorBaseRadius.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorBaseRadius.Location = new System.Drawing.Point(236, 70);
+            this.ManipulatorBaseRadius.Location = new System.Drawing.Point(248, 70);
             this.ManipulatorBaseRadius.Maximum = new decimal(new int[] {
             10,
             0,
@@ -1153,19 +985,20 @@
             // 
             // ManipulatorBaseRadiusLabel
             // 
+            this.ManipulatorBaseRadiusLabel.AutoSize = true;
             this.ManipulatorBaseRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(9, 70);
+            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(2, 74);
             this.ManipulatorBaseRadiusLabel.Name = "ManipulatorBaseRadiusLabel";
-            this.ManipulatorBaseRadiusLabel.Size = new System.Drawing.Size(221, 24);
+            this.ManipulatorBaseRadiusLabel.Size = new System.Drawing.Size(243, 17);
             this.ManipulatorBaseRadiusLabel.TabIndex = 81;
-            this.ManipulatorBaseRadiusLabel.Text = "Manipulator base radius (5-10):";
+            this.ManipulatorBaseRadiusLabel.Text = "Ширина вертикальных опор крыла:";
             this.ManipulatorBaseRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ManipulatorRadius
             // 
             this.ManipulatorRadius.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ManipulatorRadius.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorRadius.Location = new System.Drawing.Point(236, 39);
+            this.ManipulatorRadius.Location = new System.Drawing.Point(248, 39);
             this.ManipulatorRadius.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1189,55 +1022,20 @@
             // 
             // ManipulatorRadiusLabel
             // 
+            this.ManipulatorRadiusLabel.AutoSize = true;
             this.ManipulatorRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(9, 39);
+            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(14, 41);
             this.ManipulatorRadiusLabel.Name = "ManipulatorRadiusLabel";
-            this.ManipulatorRadiusLabel.Size = new System.Drawing.Size(221, 24);
+            this.ManipulatorRadiusLabel.Size = new System.Drawing.Size(231, 17);
             this.ManipulatorRadiusLabel.TabIndex = 79;
-            this.ManipulatorRadiusLabel.Text = "Manipulator radius (2-5):";
+            this.ManipulatorRadiusLabel.Text = "Ширина нижних опор для шасси:";
             this.ManipulatorRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // CardReaderWidth
-            // 
-            this.CardReaderWidth.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CardReaderWidth.ForeColor = System.Drawing.Color.White;
-            this.CardReaderWidth.Location = new System.Drawing.Point(555, 101);
-            this.CardReaderWidth.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.CardReaderWidth.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.CardReaderWidth.Name = "CardReaderWidth";
-            this.CardReaderWidth.Size = new System.Drawing.Size(70, 23);
-            this.CardReaderWidth.TabIndex = 76;
-            this.CardReaderWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CardReaderWidth.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.CardReaderWidth.ValueChanged += new System.EventHandler(this.CardReaderWidth_ValueChanged);
-            // 
-            // CardReaderWidthLabel
-            // 
-            this.CardReaderWidthLabel.ForeColor = System.Drawing.Color.White;
-            this.CardReaderWidthLabel.Location = new System.Drawing.Point(328, 101);
-            this.CardReaderWidthLabel.Name = "CardReaderWidthLabel";
-            this.CardReaderWidthLabel.Size = new System.Drawing.Size(221, 24);
-            this.CardReaderWidthLabel.TabIndex = 77;
-            this.CardReaderWidthLabel.Text = "Card reader width (10-20):";
-            this.CardReaderWidthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SecondDisplayDiagonal
             // 
             this.SecondDisplayDiagonal.BackColor = System.Drawing.SystemColors.HotTrack;
             this.SecondDisplayDiagonal.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonal.Location = new System.Drawing.Point(235, 8);
+            this.SecondDisplayDiagonal.Location = new System.Drawing.Point(247, 8);
             this.SecondDisplayDiagonal.Maximum = new decimal(new int[] {
             60,
             0,
@@ -1261,12 +1059,13 @@
             // 
             // SecondDisplayDiagonalLabel
             // 
+            this.SecondDisplayDiagonalLabel.AutoSize = true;
             this.SecondDisplayDiagonalLabel.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(8, 8);
+            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(133, 12);
             this.SecondDisplayDiagonalLabel.Name = "SecondDisplayDiagonalLabel";
-            this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(221, 24);
+            this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(112, 17);
             this.SecondDisplayDiagonalLabel.TabIndex = 75;
-            this.SecondDisplayDiagonalLabel.Text = "Second display diagonal (20-60):";
+            this.SecondDisplayDiagonalLabel.Text = "Ширина крыла:";
             this.SecondDisplayDiagonalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParametersPanel
@@ -1559,8 +1358,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сценаToolStripMenuItem,
             this.отображениеToolStripMenuItem,
-            this.камераToolStripMenuItem,
-            this.вращениеОбъектаToolStripMenuItem});
+            this.камераToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 25);
@@ -1644,22 +1442,6 @@
             this.объекToolStripMenuItem.Text = "Объект";
             this.объекToolStripMenuItem.Click += new System.EventHandler(this.ОбъекToolStripMenuItem_Click);
             // 
-            // вращениеОбъектаToolStripMenuItem
-            // 
-            this.вращениеОбъектаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.начатьВращениеToolStripMenuItem});
-            this.вращениеОбъектаToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.вращениеОбъектаToolStripMenuItem.Name = "вращениеОбъектаToolStripMenuItem";
-            this.вращениеОбъектаToolStripMenuItem.Size = new System.Drawing.Size(148, 21);
-            this.вращениеОбъектаToolStripMenuItem.Text = "Вращение объекта";
-            // 
-            // начатьВращениеToolStripMenuItem
-            // 
-            this.начатьВращениеToolStripMenuItem.Name = "начатьВращениеToolStripMenuItem";
-            this.начатьВращениеToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.начатьВращениеToolStripMenuItem.Text = "Начать";
-            this.начатьВращениеToolStripMenuItem.Click += new System.EventHandler(this.НачатьВращениеToolStripMenuItem_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1700,17 +1482,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.RotateX)).EndInit();
             this.ControlPanel.ResumeLayout(false);
             this.ConsoleParameters.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.IndicatorsCount)).EndInit();
+            this.ConsoleParameters.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CylindersRadius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardReadersCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BrightnessBottomPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FrameThickness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrossButtonSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeSpace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CylindersHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManipulatorBaseRadius)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManipulatorRadius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardReaderWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).EndInit();
             this.ParametersPanel.ResumeLayout(false);
             this.ParametersPanel.PerformLayout();
@@ -1786,13 +1564,9 @@
         private System.Windows.Forms.NumericUpDown ScaleZ;
         private System.Windows.Forms.NumericUpDown ScaleY;
         private System.Windows.Forms.Panel ConsoleParameters;
-        private System.Windows.Forms.NumericUpDown CardReaderWidth;
-        private System.Windows.Forms.Label CardReaderWidthLabel;
         private System.Windows.Forms.NumericUpDown SecondDisplayDiagonal;
         private System.Windows.Forms.Label SecondDisplayDiagonalLabel;
-        private System.Windows.Forms.NumericUpDown FrameThickness;
         private System.Windows.Forms.NumericUpDown CrossButtonSize;
-        private System.Windows.Forms.Label FrameThicknessLabel;
         private System.Windows.Forms.Label CrossButtonSizeLabel;
         private System.Windows.Forms.NumericUpDown VolumeSpace;
         private System.Windows.Forms.Label VolumeSpaceLabel;
@@ -1802,14 +1576,8 @@
         private System.Windows.Forms.Label ManipulatorBaseRadiusLabel;
         private System.Windows.Forms.NumericUpDown ManipulatorRadius;
         private System.Windows.Forms.Label ManipulatorRadiusLabel;
-        private System.Windows.Forms.NumericUpDown IndicatorsCount;
-        private System.Windows.Forms.Label IndicatorsCountLabel;
         private System.Windows.Forms.NumericUpDown CylindersRadius;
         private System.Windows.Forms.Label CylindersRadiusLabel;
-        private System.Windows.Forms.NumericUpDown CardReadersCount;
-        private System.Windows.Forms.Label CardReadersCountLabel;
-        private System.Windows.Forms.NumericUpDown BrightnessBottomPosition;
-        private System.Windows.Forms.Label BrightnessBottomPositionLabel;
         private System.Windows.Forms.SaveFileDialog ExportDialog;
         private System.Windows.Forms.OpenFileDialog ImportDialog;
         private System.Windows.Forms.SaveFileDialog SaveImageDialog;
@@ -1817,8 +1585,6 @@
         private System.Windows.Forms.ToolStripMenuItem сценаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem импортToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem експортToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вращениеОбъектаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem начатьВращениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отображениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem каркасToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem объёмноеToolStripMenuItem;
