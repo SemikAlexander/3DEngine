@@ -227,13 +227,13 @@ namespace _3DEngine
                 }
                 else
                 {
-                    SecondDisplayDiagonal.Value = (decimal)((TriplaneObject)currentObject).SecondDisplayDiagonal;
-                    ManipulatorRadius.Value = (decimal)((TriplaneObject)currentObject).ManipulatorRadius;
-                    ManipulatorBaseRadius.Value = (decimal)((TriplaneObject)currentObject).ManipulatorBaseRadius;
-                    CylindersHeight.Value = (decimal)((TriplaneObject)currentObject).CylindersHeight;
-                    CylindersRadius.Value = (decimal)((TriplaneObject)currentObject).CylindersRadius;
-                    CrossButtonSize.Value = (decimal)((TriplaneObject)currentObject).CrossButtonSize;
-                    VolumeSpace.Value = (decimal)((TriplaneObject)currentObject).VolumeSpace;
+                    WingWidth.Value = (decimal)((TriplaneObject)currentObject).WingWidth;
+                    widthLowerChassis.Value = (decimal)((TriplaneObject)currentObject).widthLowerChassis;
+                    widthVerticalWingSupports.Value = (decimal)((TriplaneObject)currentObject).widthVerticalWingSupports;
+                    radiusChassis.Value = (decimal)((TriplaneObject)currentObject).radiusChassis;
+                    widthLop.Value = (decimal)((TriplaneObject)currentObject).widthLop;
+                    Sit.Value = (decimal)((TriplaneObject)currentObject).Sit;
+                    widthVerticalBackWing.Value = (decimal)((TriplaneObject)currentObject).widthVerticalBackWing;
                     ConsoleParameters.Visible = ConsoleParameters.Enabled = true;
                     ParametersPanel.Visible = ParametersPanel.Enabled = false;
                 }
@@ -822,44 +822,51 @@ namespace _3DEngine
 
         private void SecondDisplayDiagonal_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).SecondDisplayDiagonal = (double)SecondDisplayDiagonal.Value;
+            ((TriplaneObject)currentObject).WingWidth = (double)WingWidth.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void ManipulatorRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).ManipulatorRadius = (double)ManipulatorRadius.Value;
+            ((TriplaneObject)currentObject).widthLowerChassis = (double)widthLowerChassis.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void ManipulatorBaseRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).ManipulatorBaseRadius = (double)ManipulatorBaseRadius.Value;
+            ((TriplaneObject)currentObject).widthVerticalWingSupports = (double)widthVerticalWingSupports.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void CylindersHeight_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).CylindersHeight = (double)CylindersHeight.Value;
+            ((TriplaneObject)currentObject).radiusChassis = (double)radiusChassis.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void CylindersRadius_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).CylindersRadius = (double)CylindersRadius.Value;
+            ((TriplaneObject)currentObject).widthLop = (double)widthLop.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void CrossButtonSize_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).CrossButtonSize = (double)CrossButtonSize.Value;
+            ((TriplaneObject)currentObject).Sit = (double)Sit.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void VolumeSpace_ValueChanged(object sender, EventArgs e)
         {
-            ((TriplaneObject)currentObject).VolumeSpace = (double)VolumeSpace.Value;
+            ((TriplaneObject)currentObject).widthVerticalBackWing = (double)widthVerticalBackWing.Value;
             ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
 
         private void ExportScene_Click(object sender, EventArgs e)
@@ -927,18 +934,18 @@ namespace _3DEngine
                             TriplaneObject consoleObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("TriplaneObject-object");
 
-                            objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
-                            objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
-                            objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
-                            objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
-                            objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
-                            objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
-                            objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
-                            objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
-                            objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
-                            objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
-                            objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
-                            objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
+                            //objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
+                            //objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
+                            //objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
+                            //objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
+                            //objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
+                            //objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
+                            //objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
+                            //objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
+                            //objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
+                            //objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
+                            //objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
+                            //objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
                         }
                         else
                         {
@@ -1236,18 +1243,18 @@ namespace _3DEngine
                             double.Parse(scale.Attribute("z").Value, format)
                             );
 
-                        consoleObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
-                        consoleObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
-                        consoleObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
-                        consoleObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
-                        consoleObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
-                        consoleObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
-                        consoleObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
-                        consoleObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
-                        consoleObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
-                        consoleObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
-                        consoleObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
-                        consoleObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
+                        //consoleObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
+                        //consoleObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
+                        //consoleObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
+                        //consoleObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
+                        //consoleObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
+                        //consoleObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
+                        //consoleObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
+                        //consoleObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
+                        //consoleObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
+                        //consoleObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
+                        //consoleObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
+                        //consoleObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
 
                         consoleObject.UpdateObject();
 
@@ -1527,18 +1534,18 @@ namespace _3DEngine
                             double.Parse(scale.Attribute("z").Value, format)
                             );
 
-                        triplaneObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
-                        triplaneObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
-                        triplaneObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
-                        triplaneObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
-                        triplaneObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
-                        triplaneObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
-                        triplaneObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
-                        triplaneObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
-                        triplaneObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
-                        triplaneObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
-                        triplaneObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
-                        triplaneObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
+                        //triplaneObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
+                        //triplaneObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
+                        //triplaneObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
+                        //triplaneObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
+                        //triplaneObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
+                        //triplaneObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
+                        //triplaneObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
+                        //triplaneObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
+                        //triplaneObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
+                        //triplaneObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
+                        //triplaneObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
+                        //triplaneObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
 
                         triplaneObject.UpdateObject();
 
@@ -1625,18 +1632,18 @@ namespace _3DEngine
                             TriplaneObject consoleObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("console-object");
 
-                            objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
-                            objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
-                            objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
-                            objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
-                            objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
-                            objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
-                            objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
-                            objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
-                            objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
-                            objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
-                            objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
-                            objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
+                            //objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
+                            //objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
+                            //objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
+                            //objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
+                            //objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
+                            //objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
+                            //objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
+                            //objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
+                            //objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
+                            //objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
+                            //objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
+                            //objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
                         }
                         else
                         {
@@ -1779,6 +1786,13 @@ namespace _3DEngine
             Rotation = 1;
             позиционныйToolStripMenuItem.Image = null;
             объекToolStripMenuItem.Image = Properties.Resources.Check;
+        }
+
+        private void NumOfWings_ValueChanged(object sender, EventArgs e)
+        {
+            ((TriplaneObject)currentObject).NumOfWings = (double)NumOfWings.Value;
+            ((TriplaneObject)currentObject).UpdateObject();
+            scene.PaintObjects();
         }
     }
 }

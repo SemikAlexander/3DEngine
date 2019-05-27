@@ -70,19 +70,19 @@
             this.RotateLabel = new System.Windows.Forms.Label();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.ConsoleParameters = new System.Windows.Forms.Panel();
-            this.CylindersRadius = new System.Windows.Forms.NumericUpDown();
+            this.widthLop = new System.Windows.Forms.NumericUpDown();
             this.CylindersRadiusLabel = new System.Windows.Forms.Label();
-            this.CrossButtonSize = new System.Windows.Forms.NumericUpDown();
+            this.Sit = new System.Windows.Forms.NumericUpDown();
             this.CrossButtonSizeLabel = new System.Windows.Forms.Label();
-            this.VolumeSpace = new System.Windows.Forms.NumericUpDown();
+            this.widthVerticalBackWing = new System.Windows.Forms.NumericUpDown();
             this.VolumeSpaceLabel = new System.Windows.Forms.Label();
-            this.CylindersHeight = new System.Windows.Forms.NumericUpDown();
+            this.radiusChassis = new System.Windows.Forms.NumericUpDown();
             this.CylindersHeightLabel = new System.Windows.Forms.Label();
-            this.ManipulatorBaseRadius = new System.Windows.Forms.NumericUpDown();
+            this.widthVerticalWingSupports = new System.Windows.Forms.NumericUpDown();
             this.ManipulatorBaseRadiusLabel = new System.Windows.Forms.Label();
-            this.ManipulatorRadius = new System.Windows.Forms.NumericUpDown();
+            this.widthLowerChassis = new System.Windows.Forms.NumericUpDown();
             this.ManipulatorRadiusLabel = new System.Windows.Forms.Label();
-            this.SecondDisplayDiagonal = new System.Windows.Forms.NumericUpDown();
+            this.WingWidth = new System.Windows.Forms.NumericUpDown();
             this.SecondDisplayDiagonalLabel = new System.Windows.Forms.Label();
             this.ParametersPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -115,6 +115,8 @@
             this.поворотКамерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.позиционныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NumOfWings = new System.Windows.Forms.NumericUpDown();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -135,13 +137,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.RotateX)).BeginInit();
             this.ControlPanel.SuspendLayout();
             this.ConsoleParameters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CylindersRadius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CrossButtonSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VolumeSpace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CylindersHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManipulatorBaseRadius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManipulatorRadius)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthVerticalBackWing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiusChassis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthVerticalWingSupports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthLowerChassis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WingWidth)).BeginInit();
             this.ParametersPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SegmentsBox)).BeginInit();
@@ -152,6 +154,7 @@
             this.CanvasPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTimer
@@ -774,19 +777,21 @@
             // ConsoleParameters
             // 
             this.ConsoleParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConsoleParameters.Controls.Add(this.CylindersRadius);
+            this.ConsoleParameters.Controls.Add(this.NumOfWings);
+            this.ConsoleParameters.Controls.Add(this.label3);
+            this.ConsoleParameters.Controls.Add(this.widthLop);
             this.ConsoleParameters.Controls.Add(this.CylindersRadiusLabel);
-            this.ConsoleParameters.Controls.Add(this.CrossButtonSize);
+            this.ConsoleParameters.Controls.Add(this.Sit);
             this.ConsoleParameters.Controls.Add(this.CrossButtonSizeLabel);
-            this.ConsoleParameters.Controls.Add(this.VolumeSpace);
+            this.ConsoleParameters.Controls.Add(this.widthVerticalBackWing);
             this.ConsoleParameters.Controls.Add(this.VolumeSpaceLabel);
-            this.ConsoleParameters.Controls.Add(this.CylindersHeight);
+            this.ConsoleParameters.Controls.Add(this.radiusChassis);
             this.ConsoleParameters.Controls.Add(this.CylindersHeightLabel);
-            this.ConsoleParameters.Controls.Add(this.ManipulatorBaseRadius);
+            this.ConsoleParameters.Controls.Add(this.widthVerticalWingSupports);
             this.ConsoleParameters.Controls.Add(this.ManipulatorBaseRadiusLabel);
-            this.ConsoleParameters.Controls.Add(this.ManipulatorRadius);
+            this.ConsoleParameters.Controls.Add(this.widthLowerChassis);
             this.ConsoleParameters.Controls.Add(this.ManipulatorRadiusLabel);
-            this.ConsoleParameters.Controls.Add(this.SecondDisplayDiagonal);
+            this.ConsoleParameters.Controls.Add(this.WingWidth);
             this.ConsoleParameters.Controls.Add(this.SecondDisplayDiagonalLabel);
             this.ConsoleParameters.Enabled = false;
             this.ConsoleParameters.Location = new System.Drawing.Point(7, 298);
@@ -797,37 +802,37 @@
             this.ConsoleParameters.TabIndex = 68;
             this.ConsoleParameters.Visible = false;
             // 
-            // CylindersRadius
+            // widthLop
             // 
-            this.CylindersRadius.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CylindersRadius.DecimalPlaces = 1;
-            this.CylindersRadius.ForeColor = System.Drawing.Color.White;
-            this.CylindersRadius.Increment = new decimal(new int[] {
+            this.widthLop.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.widthLop.DecimalPlaces = 1;
+            this.widthLop.ForeColor = System.Drawing.Color.White;
+            this.widthLop.Increment = new decimal(new int[] {
             5,
             0,
             0,
             65536});
-            this.CylindersRadius.Location = new System.Drawing.Point(554, 39);
-            this.CylindersRadius.Maximum = new decimal(new int[] {
-            25,
+            this.widthLop.Location = new System.Drawing.Point(554, 39);
+            this.widthLop.Maximum = new decimal(new int[] {
+            4,
             0,
             0,
-            65536});
-            this.CylindersRadius.Minimum = new decimal(new int[] {
+            0});
+            this.widthLop.Minimum = new decimal(new int[] {
             15,
             0,
             0,
             65536});
-            this.CylindersRadius.Name = "CylindersRadius";
-            this.CylindersRadius.Size = new System.Drawing.Size(70, 23);
-            this.CylindersRadius.TabIndex = 90;
-            this.CylindersRadius.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CylindersRadius.Value = new decimal(new int[] {
-            25,
+            this.widthLop.Name = "widthLop";
+            this.widthLop.Size = new System.Drawing.Size(70, 23);
+            this.widthLop.TabIndex = 90;
+            this.widthLop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.widthLop.Value = new decimal(new int[] {
+            2,
             0,
             0,
-            65536});
-            this.CylindersRadius.ValueChanged += new System.EventHandler(this.CylindersRadius_ValueChanged);
+            0});
+            this.widthLop.ValueChanged += new System.EventHandler(this.CylindersRadius_ValueChanged);
             // 
             // CylindersRadiusLabel
             // 
@@ -840,31 +845,31 @@
             this.CylindersRadiusLabel.Text = "Ширина лопасти:";
             this.CylindersRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CrossButtonSize
+            // Sit
             // 
-            this.CrossButtonSize.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CrossButtonSize.ForeColor = System.Drawing.Color.White;
-            this.CrossButtonSize.Location = new System.Drawing.Point(554, 70);
-            this.CrossButtonSize.Maximum = new decimal(new int[] {
-            7,
+            this.Sit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Sit.ForeColor = System.Drawing.Color.White;
+            this.Sit.Location = new System.Drawing.Point(554, 70);
+            this.Sit.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
-            this.CrossButtonSize.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.CrossButtonSize.Name = "CrossButtonSize";
-            this.CrossButtonSize.Size = new System.Drawing.Size(70, 23);
-            this.CrossButtonSize.TabIndex = 84;
-            this.CrossButtonSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CrossButtonSize.Value = new decimal(new int[] {
+            this.Sit.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.CrossButtonSize.ValueChanged += new System.EventHandler(this.CrossButtonSize_ValueChanged);
+            this.Sit.Name = "Sit";
+            this.Sit.Size = new System.Drawing.Size(70, 23);
+            this.Sit.TabIndex = 84;
+            this.Sit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Sit.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.Sit.ValueChanged += new System.EventHandler(this.CrossButtonSize_ValueChanged);
             // 
             // CrossButtonSizeLabel
             // 
@@ -877,74 +882,74 @@
             this.CrossButtonSizeLabel.Text = "Ширина кабинки лётчика:";
             this.CrossButtonSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // VolumeSpace
+            // widthVerticalBackWing
             // 
-            this.VolumeSpace.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.VolumeSpace.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpace.Location = new System.Drawing.Point(390, 104);
-            this.VolumeSpace.Maximum = new decimal(new int[] {
-            5,
+            this.widthVerticalBackWing.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.widthVerticalBackWing.ForeColor = System.Drawing.Color.White;
+            this.widthVerticalBackWing.Location = new System.Drawing.Point(247, 99);
+            this.widthVerticalBackWing.Maximum = new decimal(new int[] {
+            30,
             0,
             0,
             0});
-            this.VolumeSpace.Minimum = new decimal(new int[] {
-            1,
+            this.widthVerticalBackWing.Minimum = new decimal(new int[] {
+            20,
             0,
             0,
             0});
-            this.VolumeSpace.Name = "VolumeSpace";
-            this.VolumeSpace.Size = new System.Drawing.Size(70, 23);
-            this.VolumeSpace.TabIndex = 78;
-            this.VolumeSpace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VolumeSpace.Value = new decimal(new int[] {
-            1,
+            this.widthVerticalBackWing.Name = "widthVerticalBackWing";
+            this.widthVerticalBackWing.Size = new System.Drawing.Size(70, 23);
+            this.widthVerticalBackWing.TabIndex = 78;
+            this.widthVerticalBackWing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.widthVerticalBackWing.Value = new decimal(new int[] {
+            20,
             0,
             0,
             0});
-            this.VolumeSpace.ValueChanged += new System.EventHandler(this.VolumeSpace_ValueChanged);
+            this.widthVerticalBackWing.ValueChanged += new System.EventHandler(this.VolumeSpace_ValueChanged);
             // 
             // VolumeSpaceLabel
             // 
             this.VolumeSpaceLabel.AutoSize = true;
             this.VolumeSpaceLabel.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpaceLabel.Location = new System.Drawing.Point(168, 108);
+            this.VolumeSpaceLabel.Location = new System.Drawing.Point(25, 103);
             this.VolumeSpaceLabel.Name = "VolumeSpaceLabel";
             this.VolumeSpaceLabel.Size = new System.Drawing.Size(216, 17);
             this.VolumeSpaceLabel.TabIndex = 79;
             this.VolumeSpaceLabel.Text = "Толщина вертикального крыла:";
             this.VolumeSpaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CylindersHeight
+            // radiusChassis
             // 
-            this.CylindersHeight.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.CylindersHeight.DecimalPlaces = 1;
-            this.CylindersHeight.ForeColor = System.Drawing.Color.White;
-            this.CylindersHeight.Increment = new decimal(new int[] {
+            this.radiusChassis.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.radiusChassis.DecimalPlaces = 1;
+            this.radiusChassis.ForeColor = System.Drawing.Color.White;
+            this.radiusChassis.Increment = new decimal(new int[] {
             5,
             0,
             0,
             65536});
-            this.CylindersHeight.Location = new System.Drawing.Point(554, 8);
-            this.CylindersHeight.Maximum = new decimal(new int[] {
+            this.radiusChassis.Location = new System.Drawing.Point(554, 8);
+            this.radiusChassis.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.radiusChassis.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.CylindersHeight.Minimum = new decimal(new int[] {
-            15,
+            this.radiusChassis.Name = "radiusChassis";
+            this.radiusChassis.Size = new System.Drawing.Size(70, 23);
+            this.radiusChassis.TabIndex = 82;
+            this.radiusChassis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.radiusChassis.Value = new decimal(new int[] {
+            7,
             0,
             0,
-            65536});
-            this.CylindersHeight.Name = "CylindersHeight";
-            this.CylindersHeight.Size = new System.Drawing.Size(70, 23);
-            this.CylindersHeight.TabIndex = 82;
-            this.CylindersHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CylindersHeight.Value = new decimal(new int[] {
-            25,
-            0,
-            0,
-            65536});
-            this.CylindersHeight.ValueChanged += new System.EventHandler(this.CylindersHeight_ValueChanged);
+            0});
+            this.radiusChassis.ValueChanged += new System.EventHandler(this.CylindersHeight_ValueChanged);
             // 
             // CylindersHeightLabel
             // 
@@ -957,31 +962,31 @@
             this.CylindersHeightLabel.Text = "Радиус колеса шасси:";
             this.CylindersHeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ManipulatorBaseRadius
+            // widthVerticalWingSupports
             // 
-            this.ManipulatorBaseRadius.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ManipulatorBaseRadius.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorBaseRadius.Location = new System.Drawing.Point(248, 70);
-            this.ManipulatorBaseRadius.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.ManipulatorBaseRadius.Minimum = new decimal(new int[] {
+            this.widthVerticalWingSupports.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.widthVerticalWingSupports.ForeColor = System.Drawing.Color.White;
+            this.widthVerticalWingSupports.Location = new System.Drawing.Point(248, 70);
+            this.widthVerticalWingSupports.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.ManipulatorBaseRadius.Name = "ManipulatorBaseRadius";
-            this.ManipulatorBaseRadius.Size = new System.Drawing.Size(70, 23);
-            this.ManipulatorBaseRadius.TabIndex = 80;
-            this.ManipulatorBaseRadius.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ManipulatorBaseRadius.Value = new decimal(new int[] {
-            5,
+            this.widthVerticalWingSupports.Minimum = new decimal(new int[] {
+            2,
             0,
             0,
             0});
-            this.ManipulatorBaseRadius.ValueChanged += new System.EventHandler(this.ManipulatorBaseRadius_ValueChanged);
+            this.widthVerticalWingSupports.Name = "widthVerticalWingSupports";
+            this.widthVerticalWingSupports.Size = new System.Drawing.Size(70, 23);
+            this.widthVerticalWingSupports.TabIndex = 80;
+            this.widthVerticalWingSupports.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.widthVerticalWingSupports.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.widthVerticalWingSupports.ValueChanged += new System.EventHandler(this.ManipulatorBaseRadius_ValueChanged);
             // 
             // ManipulatorBaseRadiusLabel
             // 
@@ -994,31 +999,31 @@
             this.ManipulatorBaseRadiusLabel.Text = "Ширина вертикальных опор крыла:";
             this.ManipulatorBaseRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ManipulatorRadius
+            // widthLowerChassis
             // 
-            this.ManipulatorRadius.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ManipulatorRadius.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorRadius.Location = new System.Drawing.Point(248, 39);
-            this.ManipulatorRadius.Maximum = new decimal(new int[] {
+            this.widthLowerChassis.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.widthLowerChassis.ForeColor = System.Drawing.Color.White;
+            this.widthLowerChassis.Location = new System.Drawing.Point(248, 39);
+            this.widthLowerChassis.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.ManipulatorRadius.Minimum = new decimal(new int[] {
+            this.widthLowerChassis.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.widthLowerChassis.Name = "widthLowerChassis";
+            this.widthLowerChassis.Size = new System.Drawing.Size(70, 23);
+            this.widthLowerChassis.TabIndex = 78;
+            this.widthLowerChassis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.widthLowerChassis.Value = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.ManipulatorRadius.Name = "ManipulatorRadius";
-            this.ManipulatorRadius.Size = new System.Drawing.Size(70, 23);
-            this.ManipulatorRadius.TabIndex = 78;
-            this.ManipulatorRadius.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ManipulatorRadius.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.ManipulatorRadius.ValueChanged += new System.EventHandler(this.ManipulatorRadius_ValueChanged);
+            this.widthLowerChassis.ValueChanged += new System.EventHandler(this.ManipulatorRadius_ValueChanged);
             // 
             // ManipulatorRadiusLabel
             // 
@@ -1031,41 +1036,41 @@
             this.ManipulatorRadiusLabel.Text = "Ширина нижних опор для шасси:";
             this.ManipulatorRadiusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // SecondDisplayDiagonal
+            // WingWidth
             // 
-            this.SecondDisplayDiagonal.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.SecondDisplayDiagonal.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonal.Location = new System.Drawing.Point(247, 8);
-            this.SecondDisplayDiagonal.Maximum = new decimal(new int[] {
-            60,
+            this.WingWidth.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.WingWidth.ForeColor = System.Drawing.Color.White;
+            this.WingWidth.Location = new System.Drawing.Point(247, 8);
+            this.WingWidth.Maximum = new decimal(new int[] {
+            25,
             0,
             0,
             0});
-            this.SecondDisplayDiagonal.Minimum = new decimal(new int[] {
-            20,
+            this.WingWidth.Minimum = new decimal(new int[] {
+            10,
             0,
             0,
             0});
-            this.SecondDisplayDiagonal.Name = "SecondDisplayDiagonal";
-            this.SecondDisplayDiagonal.Size = new System.Drawing.Size(70, 23);
-            this.SecondDisplayDiagonal.TabIndex = 74;
-            this.SecondDisplayDiagonal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SecondDisplayDiagonal.Value = new decimal(new int[] {
-            55,
+            this.WingWidth.Name = "WingWidth";
+            this.WingWidth.Size = new System.Drawing.Size(70, 23);
+            this.WingWidth.TabIndex = 74;
+            this.WingWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WingWidth.Value = new decimal(new int[] {
+            15,
             0,
             0,
             0});
-            this.SecondDisplayDiagonal.ValueChanged += new System.EventHandler(this.SecondDisplayDiagonal_ValueChanged);
+            this.WingWidth.ValueChanged += new System.EventHandler(this.SecondDisplayDiagonal_ValueChanged);
             // 
             // SecondDisplayDiagonalLabel
             // 
             this.SecondDisplayDiagonalLabel.AutoSize = true;
             this.SecondDisplayDiagonalLabel.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(133, 12);
+            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(122, 10);
             this.SecondDisplayDiagonalLabel.Name = "SecondDisplayDiagonalLabel";
-            this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(112, 17);
+            this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(123, 17);
             this.SecondDisplayDiagonalLabel.TabIndex = 75;
-            this.SecondDisplayDiagonalLabel.Text = "Ширина крыла:";
+            this.SecondDisplayDiagonalLabel.Text = "Ширина крыльев:";
             this.SecondDisplayDiagonalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParametersPanel
@@ -1442,6 +1447,43 @@
             this.объекToolStripMenuItem.Text = "Объект";
             this.объекToolStripMenuItem.Click += new System.EventHandler(this.ОбъекToolStripMenuItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(407, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 17);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Количество крыльев:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // NumOfWings
+            // 
+            this.NumOfWings.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.NumOfWings.ForeColor = System.Drawing.Color.White;
+            this.NumOfWings.Location = new System.Drawing.Point(554, 99);
+            this.NumOfWings.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.NumOfWings.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumOfWings.Name = "NumOfWings";
+            this.NumOfWings.Size = new System.Drawing.Size(70, 23);
+            this.NumOfWings.TabIndex = 92;
+            this.NumOfWings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumOfWings.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.NumOfWings.ValueChanged += new System.EventHandler(this.NumOfWings_ValueChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1483,13 +1525,13 @@
             this.ControlPanel.ResumeLayout(false);
             this.ConsoleParameters.ResumeLayout(false);
             this.ConsoleParameters.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CylindersRadius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CrossButtonSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VolumeSpace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CylindersHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManipulatorBaseRadius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ManipulatorRadius)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SecondDisplayDiagonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthVerticalBackWing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiusChassis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthVerticalWingSupports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthLowerChassis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WingWidth)).EndInit();
             this.ParametersPanel.ResumeLayout(false);
             this.ParametersPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).EndInit();
@@ -1502,6 +1544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1564,19 +1607,19 @@
         private System.Windows.Forms.NumericUpDown ScaleZ;
         private System.Windows.Forms.NumericUpDown ScaleY;
         private System.Windows.Forms.Panel ConsoleParameters;
-        private System.Windows.Forms.NumericUpDown SecondDisplayDiagonal;
+        private System.Windows.Forms.NumericUpDown WingWidth;
         private System.Windows.Forms.Label SecondDisplayDiagonalLabel;
-        private System.Windows.Forms.NumericUpDown CrossButtonSize;
+        private System.Windows.Forms.NumericUpDown Sit;
         private System.Windows.Forms.Label CrossButtonSizeLabel;
-        private System.Windows.Forms.NumericUpDown VolumeSpace;
+        private System.Windows.Forms.NumericUpDown widthVerticalBackWing;
         private System.Windows.Forms.Label VolumeSpaceLabel;
-        private System.Windows.Forms.NumericUpDown CylindersHeight;
+        private System.Windows.Forms.NumericUpDown radiusChassis;
         private System.Windows.Forms.Label CylindersHeightLabel;
-        private System.Windows.Forms.NumericUpDown ManipulatorBaseRadius;
+        private System.Windows.Forms.NumericUpDown widthVerticalWingSupports;
         private System.Windows.Forms.Label ManipulatorBaseRadiusLabel;
-        private System.Windows.Forms.NumericUpDown ManipulatorRadius;
+        private System.Windows.Forms.NumericUpDown widthLowerChassis;
         private System.Windows.Forms.Label ManipulatorRadiusLabel;
-        private System.Windows.Forms.NumericUpDown CylindersRadius;
+        private System.Windows.Forms.NumericUpDown widthLop;
         private System.Windows.Forms.Label CylindersRadiusLabel;
         private System.Windows.Forms.SaveFileDialog ExportDialog;
         private System.Windows.Forms.OpenFileDialog ImportDialog;
@@ -1594,6 +1637,8 @@
         private System.Windows.Forms.ToolStripMenuItem объекToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown NumOfWings;
+        private System.Windows.Forms.Label label3;
     }
 }
 
