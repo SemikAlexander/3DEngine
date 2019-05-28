@@ -70,6 +70,8 @@
             this.RotateLabel = new System.Windows.Forms.Label();
             this.ControlPanel = new System.Windows.Forms.Panel();
             this.ConsoleParameters = new System.Windows.Forms.Panel();
+            this.NumOfWings = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.widthLop = new System.Windows.Forms.NumericUpDown();
             this.CylindersRadiusLabel = new System.Windows.Forms.Label();
             this.Sit = new System.Windows.Forms.NumericUpDown();
@@ -115,8 +117,12 @@
             this.поворотКамерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.позиционныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NumOfWings = new System.Windows.Forms.NumericUpDown();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проецированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.центральноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.параллельноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -137,6 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RotateX)).BeginInit();
             this.ControlPanel.SuspendLayout();
             this.ConsoleParameters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthVerticalBackWing)).BeginInit();
@@ -154,7 +161,6 @@
             this.CanvasPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTimer
@@ -802,6 +808,43 @@
             this.ConsoleParameters.TabIndex = 68;
             this.ConsoleParameters.Visible = false;
             // 
+            // NumOfWings
+            // 
+            this.NumOfWings.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.NumOfWings.ForeColor = System.Drawing.Color.White;
+            this.NumOfWings.Location = new System.Drawing.Point(554, 99);
+            this.NumOfWings.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.NumOfWings.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumOfWings.Name = "NumOfWings";
+            this.NumOfWings.Size = new System.Drawing.Size(70, 23);
+            this.NumOfWings.TabIndex = 92;
+            this.NumOfWings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumOfWings.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.NumOfWings.ValueChanged += new System.EventHandler(this.NumOfWings_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(407, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 17);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Количество крыльев:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // widthLop
             // 
             this.widthLop.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -1363,7 +1406,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сценаToolStripMenuItem,
             this.отображениеToolStripMenuItem,
-            this.камераToolStripMenuItem});
+            this.камераToolStripMenuItem,
+            this.сохранитьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 25);
@@ -1382,15 +1426,15 @@
             // импортToolStripMenuItem
             // 
             this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.импортToolStripMenuItem.Text = "Импорт";
             this.импортToolStripMenuItem.Click += new System.EventHandler(this.ИмпортToolStripMenuItem_Click);
             // 
             // експортToolStripMenuItem
             // 
             this.експортToolStripMenuItem.Name = "експортToolStripMenuItem";
-            this.експортToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.експортToolStripMenuItem.Text = "Експорт";
+            this.експортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.експортToolStripMenuItem.Text = "Экспорт";
             this.експортToolStripMenuItem.Click += new System.EventHandler(this.ЕкспортToolStripMenuItem_Click);
             // 
             // отображениеToolStripMenuItem
@@ -1405,21 +1449,22 @@
             // каркасToolStripMenuItem
             // 
             this.каркасToolStripMenuItem.Name = "каркасToolStripMenuItem";
-            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.каркасToolStripMenuItem.Text = "Каркасное";
             this.каркасToolStripMenuItem.Click += new System.EventHandler(this.КаркасToolStripMenuItem_Click);
             // 
             // объёмноеToolStripMenuItem
             // 
             this.объёмноеToolStripMenuItem.Name = "объёмноеToolStripMenuItem";
-            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.объёмноеToolStripMenuItem.Text = "Объёмное";
             this.объёмноеToolStripMenuItem.Click += new System.EventHandler(this.ОбъёмноеToolStripMenuItem_Click);
             // 
             // камераToolStripMenuItem
             // 
             this.камераToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поворотКамерыToolStripMenuItem});
+            this.поворотКамерыToolStripMenuItem,
+            this.проецированиеToolStripMenuItem});
             this.камераToolStripMenuItem.Name = "камераToolStripMenuItem";
             this.камераToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
             this.камераToolStripMenuItem.Text = "Камера";
@@ -1447,42 +1492,51 @@
             this.объекToolStripMenuItem.Text = "Объект";
             this.объекToolStripMenuItem.Click += new System.EventHandler(this.ОбъекToolStripMenuItem_Click);
             // 
-            // label3
+            // сохранитьToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(407, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 17);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "Количество крыльев:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.сохранитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вPNGToolStripMenuItem,
+            this.вJPGToolStripMenuItem});
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
-            // NumOfWings
+            // вPNGToolStripMenuItem
             // 
-            this.NumOfWings.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.NumOfWings.ForeColor = System.Drawing.Color.White;
-            this.NumOfWings.Location = new System.Drawing.Point(554, 99);
-            this.NumOfWings.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.NumOfWings.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumOfWings.Name = "NumOfWings";
-            this.NumOfWings.Size = new System.Drawing.Size(70, 23);
-            this.NumOfWings.TabIndex = 92;
-            this.NumOfWings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NumOfWings.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.NumOfWings.ValueChanged += new System.EventHandler(this.NumOfWings_ValueChanged);
+            this.вPNGToolStripMenuItem.Name = "вPNGToolStripMenuItem";
+            this.вPNGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вPNGToolStripMenuItem.Text = "В PNG";
+            this.вPNGToolStripMenuItem.Click += new System.EventHandler(this.ВPNGToolStripMenuItem_Click);
+            // 
+            // вJPGToolStripMenuItem
+            // 
+            this.вJPGToolStripMenuItem.Name = "вJPGToolStripMenuItem";
+            this.вJPGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вJPGToolStripMenuItem.Text = "В JPG";
+            this.вJPGToolStripMenuItem.Click += new System.EventHandler(this.ВJPGToolStripMenuItem_Click);
+            // 
+            // проецированиеToolStripMenuItem
+            // 
+            this.проецированиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.центральноеToolStripMenuItem,
+            this.параллельноеToolStripMenuItem});
+            this.проецированиеToolStripMenuItem.Name = "проецированиеToolStripMenuItem";
+            this.проецированиеToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.проецированиеToolStripMenuItem.Text = "Проецирование";
+            // 
+            // центральноеToolStripMenuItem
+            // 
+            this.центральноеToolStripMenuItem.Name = "центральноеToolStripMenuItem";
+            this.центральноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.центральноеToolStripMenuItem.Text = "Центральное";
+            this.центральноеToolStripMenuItem.Click += new System.EventHandler(this.ЦентральноеToolStripMenuItem_Click);
+            // 
+            // параллельноеToolStripMenuItem
+            // 
+            this.параллельноеToolStripMenuItem.Name = "параллельноеToolStripMenuItem";
+            this.параллельноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.параллельноеToolStripMenuItem.Text = "Ортогональное";
+            this.параллельноеToolStripMenuItem.Click += new System.EventHandler(this.ПараллельноеToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -1525,6 +1579,7 @@
             this.ControlPanel.ResumeLayout(false);
             this.ConsoleParameters.ResumeLayout(false);
             this.ConsoleParameters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthVerticalBackWing)).EndInit();
@@ -1544,7 +1599,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RenderPicture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumOfWings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1639,6 +1693,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown NumOfWings;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вPNGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вJPGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem проецированиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem центральноеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem параллельноеToolStripMenuItem;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Xml.Linq;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace _3DEngine
@@ -36,16 +37,6 @@ namespace _3DEngine
             PositionX.Maximum = PositionY.Maximum = PositionZ.Maximum = MaxCoordinate;
 
             IsUpdating = false;
-
-            //Primitive primitive = new Tube(new Point3D(0, 0, 0), 100, 50, 100, 20, 32, Color.LimeGreen);
-            //SceneObject sceneObject = new SceneObject("Test");
-            //sceneObject.BasePoint = new Point3D(0, 0, 200);
-            //sceneObject.AddScenePrimitive(new ScenePrimitive(primitive, "Primitive"));
-            //scene.AddObject(sceneObject);
-            //ObjectsList.Items.Add(sceneObject.Name);
-
-            //ObjectsList.SelectedIndex = 0;
-
             RenderPicture.MouseWheel += new MouseEventHandler(Canvas_MouseWheel);
         }
 
@@ -1533,20 +1524,6 @@ namespace _3DEngine
                             double.Parse(scale.Attribute("y").Value, format),
                             double.Parse(scale.Attribute("z").Value, format)
                             );
-
-                        //triplaneObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
-                        //triplaneObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
-                        //triplaneObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
-                        //triplaneObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
-                        //triplaneObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
-                        //triplaneObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
-                        //triplaneObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
-                        //triplaneObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
-                        //triplaneObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
-                        //triplaneObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
-                        //triplaneObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
-                        //triplaneObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
-
                         triplaneObject.UpdateObject();
 
                         scene.AddObject(triplaneObject);
@@ -1631,19 +1608,6 @@ namespace _3DEngine
                         {
                             TriplaneObject consoleObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("console-object");
-
-                            //objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
-                            //objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
-                            //objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
-                            //objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
-                            //objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
-                            //objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
-                            //objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
-                            //objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
-                            //objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
-                            //objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
-                            //objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
-                            //objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
                         }
                         else
                         {
@@ -1793,6 +1757,36 @@ namespace _3DEngine
             ((TriplaneObject)currentObject).NumOfWings = (double)NumOfWings.Value;
             ((TriplaneObject)currentObject).UpdateObject();
             scene.PaintObjects();
+        }
+
+        private void ВPNGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "PNG Image(*.png)|*.png";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                RenderPicture.Image.Save(saveFile.FileName, ImageFormat.Png);
+            }
+        }
+
+        private void ВJPGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "JPG Image(*.jpg)|*.jpg";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                RenderPicture.Image.Save(saveFile.FileName, ImageFormat.Jpeg);
+            }
+        }
+
+        private void ЦентральноеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            scene.Camera.IsCentralProjection = true;
+        }
+
+        private void ПараллельноеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            scene.Camera.IsCentralProjection = false;
         }
     }
 }

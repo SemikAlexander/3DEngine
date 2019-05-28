@@ -5,7 +5,6 @@ namespace _3DEngine
 {
     public class TriplaneObject : SceneObject
     {
-        
         public double WingWidth { get; set; } = 15;
         public double widthLowerChassis { get; set; } = 2;
         public double radiusChassis { get; set; } = 7;
