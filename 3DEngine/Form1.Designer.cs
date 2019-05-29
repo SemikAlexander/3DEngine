@@ -117,12 +117,16 @@
             this.поворотКамерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.позиционныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.объекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проецированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.центральноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.параллельноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteCamera = new System.Windows.Forms.Button();
+            this.AddCamera = new System.Windows.Forms.Button();
+            this.CamerasList = new System.Windows.Forms.ComboBox();
+            this.CamerasListLabel = new System.Windows.Forms.Label();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -173,8 +177,12 @@
             // 
             this.CameraPanel.BackColor = System.Drawing.SystemColors.GrayText;
             this.CameraPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CameraPanel.Controls.Add(this.DeleteCamera);
             this.CameraPanel.Controls.Add(this.CameraPositionZ);
+            this.CameraPanel.Controls.Add(this.AddCamera);
             this.CameraPanel.Controls.Add(this.CameraPositionY);
+            this.CameraPanel.Controls.Add(this.CamerasList);
+            this.CameraPanel.Controls.Add(this.CamerasListLabel);
             this.CameraPanel.Controls.Add(this.CameraPositionX);
             this.CameraPanel.Controls.Add(this.CameraTargetZ);
             this.CameraPanel.Controls.Add(this.CameraTargetY);
@@ -189,7 +197,7 @@
             this.CameraPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.CameraPanel.Name = "CameraPanel";
             this.CameraPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.CameraPanel.Size = new System.Drawing.Size(315, 128);
+            this.CameraPanel.Size = new System.Drawing.Size(315, 153);
             this.CameraPanel.TabIndex = 1;
             // 
             // CameraPositionZ
@@ -331,9 +339,9 @@
             this.ResetCamera.FlatAppearance.BorderSize = 0;
             this.ResetCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResetCamera.ForeColor = System.Drawing.Color.White;
-            this.ResetCamera.Location = new System.Drawing.Point(82, 94);
+            this.ResetCamera.Location = new System.Drawing.Point(89, 123);
             this.ResetCamera.Name = "ResetCamera";
-            this.ResetCamera.Size = new System.Drawing.Size(226, 24);
+            this.ResetCamera.Size = new System.Drawing.Size(219, 24);
             this.ResetCamera.TabIndex = 23;
             this.ResetCamera.Text = "Сбросить";
             this.ResetCamera.UseVisualStyleBackColor = false;
@@ -395,7 +403,7 @@
             this.ObjectsPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ObjectsPanel.Name = "ObjectsPanel";
             this.ObjectsPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.ObjectsPanel.Size = new System.Drawing.Size(316, 128);
+            this.ObjectsPanel.Size = new System.Drawing.Size(316, 153);
             this.ObjectsPanel.TabIndex = 5;
             // 
             // label2
@@ -481,7 +489,7 @@
             this.SpacePanel.Controls.Add(this.RotateX);
             this.SpacePanel.Controls.Add(this.RotateLabel);
             this.SpacePanel.Enabled = false;
-            this.SpacePanel.Location = new System.Drawing.Point(6, 138);
+            this.SpacePanel.Location = new System.Drawing.Point(6, 163);
             this.SpacePanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.SpacePanel.Name = "SpacePanel";
             this.SpacePanel.Padding = new System.Windows.Forms.Padding(5);
@@ -857,21 +865,21 @@
             65536});
             this.widthLop.Location = new System.Drawing.Point(554, 39);
             this.widthLop.Maximum = new decimal(new int[] {
-            4,
+            10,
             0,
             0,
             0});
             this.widthLop.Minimum = new decimal(new int[] {
-            15,
+            2,
             0,
             0,
-            65536});
+            0});
             this.widthLop.Name = "widthLop";
             this.widthLop.Size = new System.Drawing.Size(70, 23);
             this.widthLop.TabIndex = 90;
             this.widthLop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.widthLop.Value = new decimal(new int[] {
-            2,
+            5,
             0,
             0,
             0});
@@ -1134,7 +1142,7 @@
             this.ParametersPanel.Controls.Add(this.HeightLabel);
             this.ParametersPanel.Enabled = false;
             this.ParametersPanel.ForeColor = System.Drawing.Color.White;
-            this.ParametersPanel.Location = new System.Drawing.Point(326, 138);
+            this.ParametersPanel.Location = new System.Drawing.Point(326, 163);
             this.ParametersPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ParametersPanel.Name = "ParametersPanel";
             this.ParametersPanel.Padding = new System.Windows.Forms.Padding(5);
@@ -1419,6 +1427,7 @@
             this.сценаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.импортToolStripMenuItem,
             this.експортToolStripMenuItem});
+            this.сценаToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.сценаToolStripMenuItem.Name = "сценаToolStripMenuItem";
             this.сценаToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
             this.сценаToolStripMenuItem.Text = "Сцена";
@@ -1426,14 +1435,14 @@
             // импортToolStripMenuItem
             // 
             this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.импортToolStripMenuItem.Text = "Импорт";
             this.импортToolStripMenuItem.Click += new System.EventHandler(this.ИмпортToolStripMenuItem_Click);
             // 
             // експортToolStripMenuItem
             // 
             this.експортToolStripMenuItem.Name = "експортToolStripMenuItem";
-            this.експортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.експортToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.експортToolStripMenuItem.Text = "Экспорт";
             this.експортToolStripMenuItem.Click += new System.EventHandler(this.ЕкспортToolStripMenuItem_Click);
             // 
@@ -1442,6 +1451,7 @@
             this.отображениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.каркасToolStripMenuItem,
             this.объёмноеToolStripMenuItem});
+            this.отображениеToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.отображениеToolStripMenuItem.Name = "отображениеToolStripMenuItem";
             this.отображениеToolStripMenuItem.Size = new System.Drawing.Size(113, 21);
             this.отображениеToolStripMenuItem.Text = "Отображение";
@@ -1449,14 +1459,14 @@
             // каркасToolStripMenuItem
             // 
             this.каркасToolStripMenuItem.Name = "каркасToolStripMenuItem";
-            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.каркасToolStripMenuItem.Text = "Каркасное";
             this.каркасToolStripMenuItem.Click += new System.EventHandler(this.КаркасToolStripMenuItem_Click);
             // 
             // объёмноеToolStripMenuItem
             // 
             this.объёмноеToolStripMenuItem.Name = "объёмноеToolStripMenuItem";
-            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.объёмноеToolStripMenuItem.Text = "Объёмное";
             this.объёмноеToolStripMenuItem.Click += new System.EventHandler(this.ОбъёмноеToolStripMenuItem_Click);
             // 
@@ -1465,6 +1475,7 @@
             this.камераToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поворотКамерыToolStripMenuItem,
             this.проецированиеToolStripMenuItem});
+            this.камераToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.камераToolStripMenuItem.Name = "камераToolStripMenuItem";
             this.камераToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
             this.камераToolStripMenuItem.Text = "Камера";
@@ -1492,29 +1503,6 @@
             this.объекToolStripMenuItem.Text = "Объект";
             this.объекToolStripMenuItem.Click += new System.EventHandler(this.ОбъекToolStripMenuItem_Click);
             // 
-            // сохранитьToolStripMenuItem
-            // 
-            this.сохранитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вPNGToolStripMenuItem,
-            this.вJPGToolStripMenuItem});
-            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
-            this.сохранитьToolStripMenuItem.Text = "Сохранить";
-            // 
-            // вPNGToolStripMenuItem
-            // 
-            this.вPNGToolStripMenuItem.Name = "вPNGToolStripMenuItem";
-            this.вPNGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вPNGToolStripMenuItem.Text = "В PNG";
-            this.вPNGToolStripMenuItem.Click += new System.EventHandler(this.ВPNGToolStripMenuItem_Click);
-            // 
-            // вJPGToolStripMenuItem
-            // 
-            this.вJPGToolStripMenuItem.Name = "вJPGToolStripMenuItem";
-            this.вJPGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.вJPGToolStripMenuItem.Text = "В JPG";
-            this.вJPGToolStripMenuItem.Click += new System.EventHandler(this.ВJPGToolStripMenuItem_Click);
-            // 
             // проецированиеToolStripMenuItem
             // 
             this.проецированиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1527,16 +1515,89 @@
             // центральноеToolStripMenuItem
             // 
             this.центральноеToolStripMenuItem.Name = "центральноеToolStripMenuItem";
-            this.центральноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.центральноеToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.центральноеToolStripMenuItem.Text = "Центральное";
             this.центральноеToolStripMenuItem.Click += new System.EventHandler(this.ЦентральноеToolStripMenuItem_Click);
             // 
             // параллельноеToolStripMenuItem
             // 
             this.параллельноеToolStripMenuItem.Name = "параллельноеToolStripMenuItem";
-            this.параллельноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.параллельноеToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.параллельноеToolStripMenuItem.Text = "Ортогональное";
             this.параллельноеToolStripMenuItem.Click += new System.EventHandler(this.ПараллельноеToolStripMenuItem_Click);
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вPNGToolStripMenuItem,
+            this.вJPGToolStripMenuItem});
+            this.сохранитьToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(91, 21);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            // 
+            // вPNGToolStripMenuItem
+            // 
+            this.вPNGToolStripMenuItem.Name = "вPNGToolStripMenuItem";
+            this.вPNGToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.вPNGToolStripMenuItem.Text = "В PNG";
+            this.вPNGToolStripMenuItem.Click += new System.EventHandler(this.ВPNGToolStripMenuItem_Click);
+            // 
+            // вJPGToolStripMenuItem
+            // 
+            this.вJPGToolStripMenuItem.Name = "вJPGToolStripMenuItem";
+            this.вJPGToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.вJPGToolStripMenuItem.Text = "В JPG";
+            this.вJPGToolStripMenuItem.Click += new System.EventHandler(this.ВJPGToolStripMenuItem_Click);
+            // 
+            // DeleteCamera
+            // 
+            this.DeleteCamera.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.DeleteCamera.Enabled = false;
+            this.DeleteCamera.FlatAppearance.BorderSize = 0;
+            this.DeleteCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteCamera.ForeColor = System.Drawing.Color.White;
+            this.DeleteCamera.Location = new System.Drawing.Point(287, 91);
+            this.DeleteCamera.Name = "DeleteCamera";
+            this.DeleteCamera.Size = new System.Drawing.Size(25, 25);
+            this.DeleteCamera.TabIndex = 79;
+            this.DeleteCamera.Text = "-";
+            this.DeleteCamera.UseVisualStyleBackColor = false;
+            this.DeleteCamera.Click += new System.EventHandler(this.DeleteCamera_Click);
+            // 
+            // AddCamera
+            // 
+            this.AddCamera.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.AddCamera.FlatAppearance.BorderSize = 0;
+            this.AddCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCamera.ForeColor = System.Drawing.Color.White;
+            this.AddCamera.Location = new System.Drawing.Point(256, 91);
+            this.AddCamera.Name = "AddCamera";
+            this.AddCamera.Size = new System.Drawing.Size(25, 25);
+            this.AddCamera.TabIndex = 78;
+            this.AddCamera.Text = "+";
+            this.AddCamera.UseVisualStyleBackColor = false;
+            this.AddCamera.Click += new System.EventHandler(this.AddCamera_Click_1);
+            // 
+            // CamerasList
+            // 
+            this.CamerasList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CamerasList.FormattingEnabled = true;
+            this.CamerasList.Location = new System.Drawing.Point(89, 92);
+            this.CamerasList.Name = "CamerasList";
+            this.CamerasList.Size = new System.Drawing.Size(161, 25);
+            this.CamerasList.TabIndex = 76;
+            this.CamerasList.SelectedIndexChanged += new System.EventHandler(this.CamerasList_SelectedIndexChanged);
+            // 
+            // CamerasListLabel
+            // 
+            this.CamerasListLabel.ForeColor = System.Drawing.Color.White;
+            this.CamerasListLabel.Location = new System.Drawing.Point(13, 91);
+            this.CamerasListLabel.Name = "CamerasListLabel";
+            this.CamerasListLabel.Size = new System.Drawing.Size(70, 23);
+            this.CamerasListLabel.TabIndex = 77;
+            this.CamerasListLabel.Text = "Камера:";
+            this.CamerasListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Main
             // 
@@ -1555,6 +1616,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.CameraPanel.ResumeLayout(false);
@@ -1699,6 +1761,10 @@
         private System.Windows.Forms.ToolStripMenuItem проецированиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem центральноеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem параллельноеToolStripMenuItem;
+        private System.Windows.Forms.Button DeleteCamera;
+        private System.Windows.Forms.Button AddCamera;
+        public System.Windows.Forms.ComboBox CamerasList;
+        private System.Windows.Forms.Label CamerasListLabel;
     }
 }
 

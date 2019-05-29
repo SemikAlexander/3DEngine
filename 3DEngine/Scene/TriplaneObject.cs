@@ -10,7 +10,7 @@ namespace _3DEngine
         public double radiusChassis { get; set; } = 7;
         public double widthVerticalWingSupports { get; set; } = 2;
         public double widthVerticalBackWing { get; set; } = 20;
-        public double widthLop { get; set; } = 2;
+        public double widthLop { get; set; } = 5;
         public double Sit { get; set; } = 10;
         public double NumOfWings { get; set; } = 3;
 
@@ -82,7 +82,7 @@ namespace _3DEngine
             ScenePrimitives.Add(auxiliary2);
 
             ScenePrimitive screw = new ScenePrimitive(
-                new Box(new Point3D(-109.5, -2, 0), widthLop, 5, 45, Color.FromArgb(211, 211, 211)),
+                new Box(new Point3D(-109.5, -2, 0), 2, widthLop, 45, Color.FromArgb(211, 211, 211)),
                 "Винт"
                 );
             ScenePrimitives.Add(screw);

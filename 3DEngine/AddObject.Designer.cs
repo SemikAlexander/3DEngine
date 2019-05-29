@@ -48,6 +48,7 @@
             this.RotateLabel = new System.Windows.Forms.Label();
             this.ObjectNameLabel = new System.Windows.Forms.Label();
             this.ObjectName = new System.Windows.Forms.TextBox();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PositionZ)).BeginInit();
@@ -67,10 +68,10 @@
             this.AddObj.FlatAppearance.BorderSize = 0;
             this.AddObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddObj.ForeColor = System.Drawing.Color.White;
-            this.AddObj.Location = new System.Drawing.Point(0, 152);
+            this.AddObj.Location = new System.Drawing.Point(0, 171);
             this.AddObj.Margin = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.AddObj.Name = "AddObj";
-            this.AddObj.Size = new System.Drawing.Size(288, 30);
+            this.AddObj.Size = new System.Drawing.Size(309, 30);
             this.AddObj.TabIndex = 69;
             this.AddObj.Text = "Добавить";
             this.AddObj.UseVisualStyleBackColor = false;
@@ -92,7 +93,7 @@
             0,
             0,
             65536});
-            this.ScaleZ.Location = new System.Drawing.Point(218, 116);
+            this.ScaleZ.Location = new System.Drawing.Point(231, 137);
             this.ScaleZ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ScaleZ.Maximum = new decimal(new int[] {
             100,
@@ -124,7 +125,7 @@
             0,
             0,
             65536});
-            this.ScaleY.Location = new System.Drawing.Point(149, 116);
+            this.ScaleY.Location = new System.Drawing.Point(162, 137);
             this.ScaleY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ScaleY.Maximum = new decimal(new int[] {
             100,
@@ -156,7 +157,7 @@
             0,
             0,
             65536});
-            this.PositionZ.Location = new System.Drawing.Point(218, 54);
+            this.PositionZ.Location = new System.Drawing.Point(231, 75);
             this.PositionZ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PositionZ.Name = "PositionZ";
             this.PositionZ.Size = new System.Drawing.Size(63, 23);
@@ -173,7 +174,7 @@
             0,
             0,
             65536});
-            this.ScaleX.Location = new System.Drawing.Point(80, 116);
+            this.ScaleX.Location = new System.Drawing.Point(93, 137);
             this.ScaleX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ScaleX.Maximum = new decimal(new int[] {
             100,
@@ -205,7 +206,7 @@
             0,
             0,
             65536});
-            this.PositionY.Location = new System.Drawing.Point(149, 54);
+            this.PositionY.Location = new System.Drawing.Point(162, 75);
             this.PositionY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PositionY.Name = "PositionY";
             this.PositionY.Size = new System.Drawing.Size(63, 23);
@@ -216,11 +217,11 @@
             // 
             this.ScaleLabel.AutoSize = true;
             this.ScaleLabel.ForeColor = System.Drawing.Color.White;
-            this.ScaleLabel.Location = new System.Drawing.Point(28, 118);
+            this.ScaleLabel.Location = new System.Drawing.Point(12, 139);
             this.ScaleLabel.Name = "ScaleLabel";
-            this.ScaleLabel.Size = new System.Drawing.Size(46, 17);
+            this.ScaleLabel.Size = new System.Drawing.Size(75, 17);
             this.ScaleLabel.TabIndex = 102;
-            this.ScaleLabel.Text = "Scale:";
+            this.ScaleLabel.Text = "Масштаб:";
             this.ScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PositionX
@@ -233,7 +234,7 @@
             0,
             0,
             65536});
-            this.PositionX.Location = new System.Drawing.Point(80, 54);
+            this.PositionX.Location = new System.Drawing.Point(93, 75);
             this.PositionX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PositionX.Maximum = new decimal(new int[] {
             130,
@@ -254,7 +255,7 @@
             // 
             this.ZLabel.AutoSize = true;
             this.ZLabel.ForeColor = System.Drawing.Color.White;
-            this.ZLabel.Location = new System.Drawing.Point(242, 33);
+            this.ZLabel.Location = new System.Drawing.Point(259, 54);
             this.ZLabel.Name = "ZLabel";
             this.ZLabel.Size = new System.Drawing.Size(14, 17);
             this.ZLabel.TabIndex = 97;
@@ -265,7 +266,7 @@
             // 
             this.YLabel.AutoSize = true;
             this.YLabel.ForeColor = System.Drawing.Color.White;
-            this.YLabel.Location = new System.Drawing.Point(170, 33);
+            this.YLabel.Location = new System.Drawing.Point(187, 54);
             this.YLabel.Name = "YLabel";
             this.YLabel.Size = new System.Drawing.Size(15, 17);
             this.YLabel.TabIndex = 96;
@@ -276,7 +277,7 @@
             // 
             this.XLabel.AutoSize = true;
             this.XLabel.ForeColor = System.Drawing.Color.White;
-            this.XLabel.Location = new System.Drawing.Point(97, 33);
+            this.XLabel.Location = new System.Drawing.Point(114, 54);
             this.XLabel.Name = "XLabel";
             this.XLabel.Size = new System.Drawing.Size(16, 17);
             this.XLabel.TabIndex = 95;
@@ -287,18 +288,18 @@
             // 
             this.PositionLabel.AutoSize = true;
             this.PositionLabel.ForeColor = System.Drawing.Color.White;
-            this.PositionLabel.Location = new System.Drawing.Point(12, 56);
+            this.PositionLabel.Location = new System.Drawing.Point(21, 77);
             this.PositionLabel.Name = "PositionLabel";
-            this.PositionLabel.Size = new System.Drawing.Size(62, 17);
+            this.PositionLabel.Size = new System.Drawing.Size(66, 17);
             this.PositionLabel.TabIndex = 94;
-            this.PositionLabel.Text = "Position:";
+            this.PositionLabel.Text = "Позиция:";
             this.PositionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // RotateZ
             // 
             this.RotateZ.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateZ.ForeColor = System.Drawing.Color.White;
-            this.RotateZ.Location = new System.Drawing.Point(218, 85);
+            this.RotateZ.Location = new System.Drawing.Point(231, 106);
             this.RotateZ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RotateZ.Maximum = new decimal(new int[] {
             180,
@@ -319,7 +320,7 @@
             // 
             this.RotateY.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateY.ForeColor = System.Drawing.Color.White;
-            this.RotateY.Location = new System.Drawing.Point(149, 85);
+            this.RotateY.Location = new System.Drawing.Point(162, 106);
             this.RotateY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RotateY.Maximum = new decimal(new int[] {
             180,
@@ -340,7 +341,7 @@
             // 
             this.RotateX.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateX.ForeColor = System.Drawing.Color.White;
-            this.RotateX.Location = new System.Drawing.Point(80, 85);
+            this.RotateX.Location = new System.Drawing.Point(93, 106);
             this.RotateX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RotateX.Maximum = new decimal(new int[] {
             180,
@@ -361,39 +362,50 @@
             // 
             this.RotateLabel.AutoSize = true;
             this.RotateLabel.ForeColor = System.Drawing.Color.White;
-            this.RotateLabel.Location = new System.Drawing.Point(18, 87);
+            this.RotateLabel.Location = new System.Drawing.Point(21, 108);
             this.RotateLabel.Name = "RotateLabel";
-            this.RotateLabel.Size = new System.Drawing.Size(56, 17);
+            this.RotateLabel.Size = new System.Drawing.Size(68, 17);
             this.RotateLabel.TabIndex = 91;
-            this.RotateLabel.Text = "Rotate:";
+            this.RotateLabel.Text = "Поворот:";
             this.RotateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ObjectNameLabel
             // 
             this.ObjectNameLabel.AutoSize = true;
             this.ObjectNameLabel.ForeColor = System.Drawing.Color.White;
-            this.ObjectNameLabel.Location = new System.Drawing.Point(12, 9);
+            this.ObjectNameLabel.Location = new System.Drawing.Point(3, 9);
             this.ObjectNameLabel.Name = "ObjectNameLabel";
-            this.ObjectNameLabel.Size = new System.Drawing.Size(52, 17);
+            this.ObjectNameLabel.Size = new System.Drawing.Size(75, 17);
             this.ObjectNameLabel.TabIndex = 88;
-            this.ObjectNameLabel.Text = "Name:";
+            this.ObjectNameLabel.Text = "Название:";
             this.ObjectNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ObjectName
             // 
-            this.ObjectName.Location = new System.Drawing.Point(70, 6);
+            this.ObjectName.Location = new System.Drawing.Point(86, 6);
             this.ObjectName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ObjectName.Name = "ObjectName";
             this.ObjectName.Size = new System.Drawing.Size(211, 23);
             this.ObjectName.TabIndex = 89;
             this.ObjectName.TextChanged += new System.EventHandler(this.ObjectName_TextChanged);
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.ForeColor = System.Drawing.Color.White;
+            this.ErrorLabel.Location = new System.Drawing.Point(18, 33);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 17);
+            this.ErrorLabel.TabIndex = 105;
+            this.ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AddObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(288, 182);
+            this.ClientSize = new System.Drawing.Size(309, 201);
+            this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.ScaleZ);
             this.Controls.Add(this.ScaleY);
             this.Controls.Add(this.PositionZ);
@@ -452,5 +464,6 @@
         private System.Windows.Forms.Label RotateLabel;
         private System.Windows.Forms.Label ObjectNameLabel;
         private System.Windows.Forms.TextBox ObjectName;
+        private System.Windows.Forms.Label ErrorLabel;
     }
 }

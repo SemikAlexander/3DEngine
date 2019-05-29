@@ -922,21 +922,8 @@ namespace _3DEngine
 
                         if (sceneObject is TriplaneObject)
                         {
-                            TriplaneObject consoleObject = (TriplaneObject)sceneObject;
+                            TriplaneObject triplaneObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("TriplaneObject-object");
-
-                            //objectElement.SetElementValue("second-screen-diagonal", string.Format(format, "{0:0.00}", consoleObject.SecondDisplayDiagonal));
-                            //objectElement.SetElementValue("manipulator-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorRadius));
-                            //objectElement.SetElementValue("manipulator-base-radius", string.Format(format, "{0:0.00}", consoleObject.ManipulatorBaseRadius));
-                            //objectElement.SetElementValue("cylinders-height", string.Format(format, "{0:0.00}", consoleObject.CylindersHeight));
-                            //objectElement.SetElementValue("cylinders-radius", string.Format(format, "{0:0.00}", consoleObject.CylindersRadius));
-                            //objectElement.SetElementValue("cross-button-size", string.Format(format, "{0:0.00}", consoleObject.CrossButtonSize));
-                            //objectElement.SetElementValue("volume-space", string.Format(format, "{0:0.00}", consoleObject.VolumeSpace));
-                            //objectElement.SetElementValue("frame-thickness", string.Format(format, "{0:0.00}", consoleObject.FrameThickness));
-                            //objectElement.SetElementValue("brightness-bottom-position", string.Format(format, "{0:0.00}", consoleObject.BrightnessBottomPosition));
-                            //objectElement.SetElementValue("card-reader-width", string.Format(format, "{0:0.00}", consoleObject.CardReaderWidth));
-                            //objectElement.SetElementValue("card-readers-count", consoleObject.CardReadersCount);
-                            //objectElement.SetElementValue("indicators-count", consoleObject.IndicatorsCount);
                         }
                         else
                         {
@@ -1036,11 +1023,9 @@ namespace _3DEngine
                     scene1.Add(objects);
 
                     document.Add(scene);
-                    //document.Save(ExportDialog.FileName);
                 }
                 catch (Exception exception)
                 {
-                    //Log.Append(exception.StackTrace);
                     MessageBox.Show("Unable to export scene!", Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -1211,46 +1196,32 @@ namespace _3DEngine
                         ObjectsList.Items.Add(sceneObject.Name);
                     }
 
-                    foreach (XElement consoleObjectElement in scene1.Element("objects").Elements("console-object"))
+                    foreach (XElement triplaneObjectElement in scene1.Element("objects").Elements("console-object"))
                     {
-                        TriplaneObject consoleObject = new TriplaneObject(consoleObjectElement.Attribute("name").Value);
+                        TriplaneObject triplaneObject = new TriplaneObject(triplaneObjectElement.Attribute("name").Value);
 
-                        XElement position = consoleObjectElement.Element("position");
-                        consoleObject.BasePoint = new Point3D(
+                        XElement position = triplaneObjectElement.Element("position");
+                        triplaneObject.BasePoint = new Point3D(
                             double.Parse(position.Attribute("x").Value, format),
                             double.Parse(position.Attribute("y").Value, format),
                             double.Parse(position.Attribute("z").Value, format)
                             );
 
-                        XElement rotate = consoleObjectElement.Element("rotate");
-                        consoleObject.AngleX = int.Parse(rotate.Attribute("x").Value);
-                        consoleObject.AngleY = int.Parse(rotate.Attribute("y").Value);
-                        consoleObject.AngleZ = int.Parse(rotate.Attribute("z").Value);
+                        XElement rotate = triplaneObjectElement.Element("rotate");
+                        triplaneObject.AngleX = int.Parse(rotate.Attribute("x").Value);
+                        triplaneObject.AngleY = int.Parse(rotate.Attribute("y").Value);
+                        triplaneObject.AngleZ = int.Parse(rotate.Attribute("z").Value);
 
-                        XElement scale = consoleObjectElement.Element("scale");
-                        consoleObject.SetScale(
+                        XElement scale = triplaneObjectElement.Element("scale");
+                        triplaneObject.SetScale(
                             double.Parse(scale.Attribute("x").Value, format),
                             double.Parse(scale.Attribute("y").Value, format),
                             double.Parse(scale.Attribute("z").Value, format)
                             );
+                        triplaneObject.UpdateObject();
 
-                        //consoleObject.SecondDisplayDiagonal = double.Parse(consoleObjectElement.Element("second-screen-diagonal").Value, format);
-                        //consoleObject.ManipulatorRadius = double.Parse(consoleObjectElement.Element("manipulator-radius").Value, format);
-                        //consoleObject.ManipulatorBaseRadius = double.Parse(consoleObjectElement.Element("manipulator-base-radius").Value, format);
-                        //consoleObject.CylindersHeight = double.Parse(consoleObjectElement.Element("cylinders-height").Value, format);
-                        //consoleObject.CylindersRadius = double.Parse(consoleObjectElement.Element("cylinders-radius").Value, format);
-                        //consoleObject.CrossButtonSize = double.Parse(consoleObjectElement.Element("cross-button-size").Value, format);
-                        //consoleObject.VolumeSpace = double.Parse(consoleObjectElement.Element("volume-space").Value, format);
-                        //consoleObject.FrameThickness = double.Parse(consoleObjectElement.Element("frame-thickness").Value, format);
-                        //consoleObject.BrightnessBottomPosition = double.Parse(consoleObjectElement.Element("brightness-bottom-position").Value, format);
-                        //consoleObject.CardReaderWidth = double.Parse(consoleObjectElement.Element("card-reader-width").Value, format);
-                        //consoleObject.CardReadersCount = int.Parse(consoleObjectElement.Element("card-readers-count").Value, format);
-                        //consoleObject.IndicatorsCount = int.Parse(consoleObjectElement.Element("indicators-count").Value, format);
-
-                        consoleObject.UpdateObject();
-
-                        scene.AddObject(consoleObject);
-                        ObjectsList.Items.Add(consoleObject.Name);
+                        scene.AddObject(triplaneObject);
+                        ObjectsList.Items.Add(triplaneObject.Name);
                     }
 
                     ObjectsList.SelectedIndex = -1;
@@ -1502,23 +1473,23 @@ namespace _3DEngine
                         ObjectsList.Items.Add(sceneObject.Name);
                     }
 
-                    foreach (XElement consoleObjectElement in scene1.Element("objects").Elements("console-object"))
+                    foreach (XElement triplaneObjectElement in scene1.Element("objects").Elements("console-object"))
                     {
-                        TriplaneObject triplaneObject = new TriplaneObject(consoleObjectElement.Attribute("name").Value);
+                        TriplaneObject triplaneObject = new TriplaneObject(triplaneObjectElement.Attribute("name").Value);
 
-                        XElement position = consoleObjectElement.Element("position");
+                        XElement position = triplaneObjectElement.Element("position");
                         triplaneObject.BasePoint = new Point3D(
                             double.Parse(position.Attribute("x").Value, format),
                             double.Parse(position.Attribute("y").Value, format),
                             double.Parse(position.Attribute("z").Value, format)
                             );
 
-                        XElement rotate = consoleObjectElement.Element("rotate");
+                        XElement rotate = triplaneObjectElement.Element("rotate");
                         triplaneObject.AngleX = int.Parse(rotate.Attribute("x").Value);
                         triplaneObject.AngleY = int.Parse(rotate.Attribute("y").Value);
                         triplaneObject.AngleZ = int.Parse(rotate.Attribute("z").Value);
 
-                        XElement scale = consoleObjectElement.Element("scale");
+                        XElement scale = triplaneObjectElement.Element("scale");
                         triplaneObject.SetScale(
                             double.Parse(scale.Attribute("x").Value, format),
                             double.Parse(scale.Attribute("y").Value, format),
@@ -1606,7 +1577,7 @@ namespace _3DEngine
 
                         if (sceneObject is TriplaneObject)
                         {
-                            TriplaneObject consoleObject = (TriplaneObject)sceneObject;
+                            TriplaneObject triplaneObject = (TriplaneObject)sceneObject;
                             objectElement = new XElement("console-object");
                         }
                         else
@@ -1783,10 +1754,48 @@ namespace _3DEngine
         {
             scene.Camera.IsCentralProjection = true;
         }
-
         private void ПараллельноеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             scene.Camera.IsCentralProjection = false;
+        }
+        private void Main_Load(object sender, EventArgs e)
+        {
+            scene.PaintObjects();
+        }
+
+        private void AddCamera_Click_1(object sender, EventArgs e)
+        {
+            scene.Camera = new Camera();
+            scene.ResetCamera();
+            scene.Cameras.Add(scene.Camera);
+            int index = 0;
+            while (CamerasList.Items.Contains($"Camera-{index}"))
+            {
+                ++index;
+            }
+            CamerasList.Items.Add($"Camera-{index}");
+            CamerasList.SelectedIndex = CamerasList.Items.Count - 1;
+            DeleteCamera.Enabled = true;
+            scene.PaintObjects();
+        }
+        private void DeleteCamera_Click(object sender, EventArgs e)
+        {
+            int index = CamerasList.SelectedIndex;
+            CamerasList.Items.RemoveAt(index);
+            scene.Cameras.RemoveAt(index);
+            CamerasList.SelectedIndex = -1;
+            CamerasList.SelectedIndex = index > 0 ? index - 1 : 0;
+            if (scene.Cameras.Count == 1)
+            {
+                DeleteCamera.Enabled = false;
+            }
+            scene.PaintObjects();
+        }
+        private void CamerasList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            scene.Camera = scene.Cameras[CamerasList.SelectedIndex];
+            UpdateCameraValues();
+            scene.PaintObjects();
         }
     }
 }
