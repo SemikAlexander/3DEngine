@@ -38,9 +38,6 @@
             this.CameraTargetZ = new System.Windows.Forms.NumericUpDown();
             this.CameraTargetY = new System.Windows.Forms.NumericUpDown();
             this.CameraTargetX = new System.Windows.Forms.NumericUpDown();
-            this.CameraZLabel = new System.Windows.Forms.Label();
-            this.CameraYLabel = new System.Windows.Forms.Label();
-            this.CameraXLabel = new System.Windows.Forms.Label();
             this.ResetCamera = new System.Windows.Forms.Button();
             this.CameraPositionLabel = new System.Windows.Forms.Label();
             this.CameraTargetLabel = new System.Windows.Forms.Label();
@@ -60,9 +57,6 @@
             this.PositionY = new System.Windows.Forms.NumericUpDown();
             this.ScaleLabel = new System.Windows.Forms.Label();
             this.PositionX = new System.Windows.Forms.NumericUpDown();
-            this.ZLabel = new System.Windows.Forms.Label();
-            this.YLabel = new System.Windows.Forms.Label();
-            this.XLabel = new System.Windows.Forms.Label();
             this.PositionLabel = new System.Windows.Forms.Label();
             this.RotateZ = new System.Windows.Forms.NumericUpDown();
             this.RotateY = new System.Windows.Forms.NumericUpDown();
@@ -127,6 +121,8 @@
             this.AddCamera = new System.Windows.Forms.Button();
             this.CamerasList = new System.Windows.Forms.ComboBox();
             this.CamerasListLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -177,6 +173,7 @@
             // 
             this.CameraPanel.BackColor = System.Drawing.SystemColors.GrayText;
             this.CameraPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CameraPanel.Controls.Add(this.label5);
             this.CameraPanel.Controls.Add(this.DeleteCamera);
             this.CameraPanel.Controls.Add(this.CameraPositionZ);
             this.CameraPanel.Controls.Add(this.AddCamera);
@@ -187,9 +184,6 @@
             this.CameraPanel.Controls.Add(this.CameraTargetZ);
             this.CameraPanel.Controls.Add(this.CameraTargetY);
             this.CameraPanel.Controls.Add(this.CameraTargetX);
-            this.CameraPanel.Controls.Add(this.CameraZLabel);
-            this.CameraPanel.Controls.Add(this.CameraYLabel);
-            this.CameraPanel.Controls.Add(this.CameraXLabel);
             this.CameraPanel.Controls.Add(this.ResetCamera);
             this.CameraPanel.Controls.Add(this.CameraPositionLabel);
             this.CameraPanel.Controls.Add(this.CameraTargetLabel);
@@ -301,36 +295,6 @@
             this.CameraTargetX.TabIndex = 46;
             this.CameraTargetX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CameraTargetX.ValueChanged += new System.EventHandler(this.CameraTargetX_ValueChanged);
-            // 
-            // CameraZLabel
-            // 
-            this.CameraZLabel.ForeColor = System.Drawing.Color.White;
-            this.CameraZLabel.Location = new System.Drawing.Point(241, 5);
-            this.CameraZLabel.Name = "CameraZLabel";
-            this.CameraZLabel.Size = new System.Drawing.Size(70, 24);
-            this.CameraZLabel.TabIndex = 39;
-            this.CameraZLabel.Text = "Z";
-            this.CameraZLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CameraYLabel
-            // 
-            this.CameraYLabel.ForeColor = System.Drawing.Color.White;
-            this.CameraYLabel.Location = new System.Drawing.Point(165, 5);
-            this.CameraYLabel.Name = "CameraYLabel";
-            this.CameraYLabel.Size = new System.Drawing.Size(70, 24);
-            this.CameraYLabel.TabIndex = 38;
-            this.CameraYLabel.Text = "Y";
-            this.CameraYLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CameraXLabel
-            // 
-            this.CameraXLabel.ForeColor = System.Drawing.Color.White;
-            this.CameraXLabel.Location = new System.Drawing.Point(89, 5);
-            this.CameraXLabel.Name = "CameraXLabel";
-            this.CameraXLabel.Size = new System.Drawing.Size(70, 24);
-            this.CameraXLabel.TabIndex = 37;
-            this.CameraXLabel.Text = "X";
-            this.CameraXLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ResetCamera
             // 
@@ -473,6 +437,7 @@
             // SpacePanel
             // 
             this.SpacePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SpacePanel.Controls.Add(this.label4);
             this.SpacePanel.Controls.Add(this.ScaleZ);
             this.SpacePanel.Controls.Add(this.ScaleY);
             this.SpacePanel.Controls.Add(this.PositionZ);
@@ -480,9 +445,6 @@
             this.SpacePanel.Controls.Add(this.PositionY);
             this.SpacePanel.Controls.Add(this.ScaleLabel);
             this.SpacePanel.Controls.Add(this.PositionX);
-            this.SpacePanel.Controls.Add(this.ZLabel);
-            this.SpacePanel.Controls.Add(this.YLabel);
-            this.SpacePanel.Controls.Add(this.XLabel);
             this.SpacePanel.Controls.Add(this.PositionLabel);
             this.SpacePanel.Controls.Add(this.RotateZ);
             this.SpacePanel.Controls.Add(this.RotateY);
@@ -493,7 +455,7 @@
             this.SpacePanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.SpacePanel.Name = "SpacePanel";
             this.SpacePanel.Padding = new System.Windows.Forms.Padding(5);
-            this.SpacePanel.Size = new System.Drawing.Size(314, 130);
+            this.SpacePanel.Size = new System.Drawing.Size(314, 153);
             this.SpacePanel.TabIndex = 7;
             // 
             // ScaleZ
@@ -506,7 +468,7 @@
             0,
             0,
             65536});
-            this.ScaleZ.Location = new System.Drawing.Point(235, 95);
+            this.ScaleZ.Location = new System.Drawing.Point(241, 109);
             this.ScaleZ.Maximum = new decimal(new int[] {
             100,
             0,
@@ -539,7 +501,7 @@
             0,
             0,
             65536});
-            this.ScaleY.Location = new System.Drawing.Point(159, 95);
+            this.ScaleY.Location = new System.Drawing.Point(165, 109);
             this.ScaleY.Maximum = new decimal(new int[] {
             100,
             0,
@@ -572,7 +534,7 @@
             0,
             0,
             65536});
-            this.PositionZ.Location = new System.Drawing.Point(235, 33);
+            this.PositionZ.Location = new System.Drawing.Point(241, 47);
             this.PositionZ.Name = "PositionZ";
             this.PositionZ.Size = new System.Drawing.Size(70, 23);
             this.PositionZ.TabIndex = 45;
@@ -590,7 +552,7 @@
             0,
             0,
             65536});
-            this.ScaleX.Location = new System.Drawing.Point(83, 95);
+            this.ScaleX.Location = new System.Drawing.Point(89, 109);
             this.ScaleX.Maximum = new decimal(new int[] {
             100,
             0,
@@ -623,7 +585,7 @@
             0,
             0,
             65536});
-            this.PositionY.Location = new System.Drawing.Point(159, 33);
+            this.PositionY.Location = new System.Drawing.Point(165, 47);
             this.PositionY.Name = "PositionY";
             this.PositionY.Size = new System.Drawing.Size(70, 23);
             this.PositionY.TabIndex = 44;
@@ -634,7 +596,7 @@
             // ScaleLabel
             // 
             this.ScaleLabel.ForeColor = System.Drawing.Color.White;
-            this.ScaleLabel.Location = new System.Drawing.Point(2, 94);
+            this.ScaleLabel.Location = new System.Drawing.Point(8, 108);
             this.ScaleLabel.Name = "ScaleLabel";
             this.ScaleLabel.Size = new System.Drawing.Size(77, 24);
             this.ScaleLabel.TabIndex = 60;
@@ -651,7 +613,7 @@
             0,
             0,
             65536});
-            this.PositionX.Location = new System.Drawing.Point(83, 33);
+            this.PositionX.Location = new System.Drawing.Point(89, 47);
             this.PositionX.Name = "PositionX";
             this.PositionX.Size = new System.Drawing.Size(70, 23);
             this.PositionX.TabIndex = 43;
@@ -659,40 +621,10 @@
             this.PositionX.ValueChanged += new System.EventHandler(this.PositionX_ValueChanged);
             this.PositionX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PositionX_MouseDown);
             // 
-            // ZLabel
-            // 
-            this.ZLabel.ForeColor = System.Drawing.Color.White;
-            this.ZLabel.Location = new System.Drawing.Point(235, 5);
-            this.ZLabel.Name = "ZLabel";
-            this.ZLabel.Size = new System.Drawing.Size(70, 24);
-            this.ZLabel.TabIndex = 42;
-            this.ZLabel.Text = "Z";
-            this.ZLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // YLabel
-            // 
-            this.YLabel.ForeColor = System.Drawing.Color.White;
-            this.YLabel.Location = new System.Drawing.Point(159, 5);
-            this.YLabel.Name = "YLabel";
-            this.YLabel.Size = new System.Drawing.Size(70, 24);
-            this.YLabel.TabIndex = 41;
-            this.YLabel.Text = "Y";
-            this.YLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // XLabel
-            // 
-            this.XLabel.ForeColor = System.Drawing.Color.White;
-            this.XLabel.Location = new System.Drawing.Point(83, 5);
-            this.XLabel.Name = "XLabel";
-            this.XLabel.Size = new System.Drawing.Size(70, 24);
-            this.XLabel.TabIndex = 40;
-            this.XLabel.Text = "X";
-            this.XLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // PositionLabel
             // 
             this.PositionLabel.ForeColor = System.Drawing.Color.White;
-            this.PositionLabel.Location = new System.Drawing.Point(8, 33);
+            this.PositionLabel.Location = new System.Drawing.Point(14, 47);
             this.PositionLabel.Name = "PositionLabel";
             this.PositionLabel.Size = new System.Drawing.Size(70, 24);
             this.PositionLabel.TabIndex = 30;
@@ -703,7 +635,7 @@
             // 
             this.RotateZ.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateZ.ForeColor = System.Drawing.Color.White;
-            this.RotateZ.Location = new System.Drawing.Point(235, 64);
+            this.RotateZ.Location = new System.Drawing.Point(241, 78);
             this.RotateZ.Maximum = new decimal(new int[] {
             180,
             0,
@@ -725,7 +657,7 @@
             // 
             this.RotateY.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateY.ForeColor = System.Drawing.Color.White;
-            this.RotateY.Location = new System.Drawing.Point(159, 64);
+            this.RotateY.Location = new System.Drawing.Point(165, 78);
             this.RotateY.Maximum = new decimal(new int[] {
             180,
             0,
@@ -747,7 +679,7 @@
             // 
             this.RotateX.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RotateX.ForeColor = System.Drawing.Color.White;
-            this.RotateX.Location = new System.Drawing.Point(83, 64);
+            this.RotateX.Location = new System.Drawing.Point(89, 78);
             this.RotateX.Maximum = new decimal(new int[] {
             180,
             0,
@@ -768,7 +700,7 @@
             // RotateLabel
             // 
             this.RotateLabel.ForeColor = System.Drawing.Color.White;
-            this.RotateLabel.Location = new System.Drawing.Point(8, 64);
+            this.RotateLabel.Location = new System.Drawing.Point(14, 78);
             this.RotateLabel.Name = "RotateLabel";
             this.RotateLabel.Size = new System.Drawing.Size(70, 24);
             this.RotateLabel.TabIndex = 24;
@@ -808,7 +740,7 @@
             this.ConsoleParameters.Controls.Add(this.WingWidth);
             this.ConsoleParameters.Controls.Add(this.SecondDisplayDiagonalLabel);
             this.ConsoleParameters.Enabled = false;
-            this.ConsoleParameters.Location = new System.Drawing.Point(7, 298);
+            this.ConsoleParameters.Location = new System.Drawing.Point(9, 321);
             this.ConsoleParameters.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ConsoleParameters.Name = "ConsoleParameters";
             this.ConsoleParameters.Padding = new System.Windows.Forms.Padding(5);
@@ -820,7 +752,7 @@
             // 
             this.NumOfWings.BackColor = System.Drawing.SystemColors.HotTrack;
             this.NumOfWings.ForeColor = System.Drawing.Color.White;
-            this.NumOfWings.Location = new System.Drawing.Point(554, 99);
+            this.NumOfWings.Location = new System.Drawing.Point(554, 118);
             this.NumOfWings.Maximum = new decimal(new int[] {
             3,
             0,
@@ -846,7 +778,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(407, 103);
+            this.label3.Location = new System.Drawing.Point(407, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 17);
             this.label3.TabIndex = 93;
@@ -863,7 +795,7 @@
             0,
             0,
             65536});
-            this.widthLop.Location = new System.Drawing.Point(554, 39);
+            this.widthLop.Location = new System.Drawing.Point(554, 58);
             this.widthLop.Maximum = new decimal(new int[] {
             10,
             0,
@@ -889,7 +821,7 @@
             // 
             this.CylindersRadiusLabel.AutoSize = true;
             this.CylindersRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersRadiusLabel.Location = new System.Drawing.Point(422, 41);
+            this.CylindersRadiusLabel.Location = new System.Drawing.Point(422, 60);
             this.CylindersRadiusLabel.Name = "CylindersRadiusLabel";
             this.CylindersRadiusLabel.Size = new System.Drawing.Size(125, 17);
             this.CylindersRadiusLabel.TabIndex = 91;
@@ -900,7 +832,7 @@
             // 
             this.Sit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Sit.ForeColor = System.Drawing.Color.White;
-            this.Sit.Location = new System.Drawing.Point(554, 70);
+            this.Sit.Location = new System.Drawing.Point(554, 89);
             this.Sit.Maximum = new decimal(new int[] {
             15,
             0,
@@ -926,7 +858,7 @@
             // 
             this.CrossButtonSizeLabel.AutoSize = true;
             this.CrossButtonSizeLabel.ForeColor = System.Drawing.Color.White;
-            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(370, 72);
+            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(370, 91);
             this.CrossButtonSizeLabel.Name = "CrossButtonSizeLabel";
             this.CrossButtonSizeLabel.Size = new System.Drawing.Size(181, 17);
             this.CrossButtonSizeLabel.TabIndex = 85;
@@ -937,7 +869,7 @@
             // 
             this.widthVerticalBackWing.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthVerticalBackWing.ForeColor = System.Drawing.Color.White;
-            this.widthVerticalBackWing.Location = new System.Drawing.Point(247, 99);
+            this.widthVerticalBackWing.Location = new System.Drawing.Point(247, 118);
             this.widthVerticalBackWing.Maximum = new decimal(new int[] {
             30,
             0,
@@ -963,7 +895,7 @@
             // 
             this.VolumeSpaceLabel.AutoSize = true;
             this.VolumeSpaceLabel.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpaceLabel.Location = new System.Drawing.Point(25, 103);
+            this.VolumeSpaceLabel.Location = new System.Drawing.Point(25, 122);
             this.VolumeSpaceLabel.Name = "VolumeSpaceLabel";
             this.VolumeSpaceLabel.Size = new System.Drawing.Size(216, 17);
             this.VolumeSpaceLabel.TabIndex = 79;
@@ -980,7 +912,7 @@
             0,
             0,
             65536});
-            this.radiusChassis.Location = new System.Drawing.Point(554, 8);
+            this.radiusChassis.Location = new System.Drawing.Point(554, 27);
             this.radiusChassis.Maximum = new decimal(new int[] {
             10,
             0,
@@ -1006,7 +938,7 @@
             // 
             this.CylindersHeightLabel.AutoSize = true;
             this.CylindersHeightLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersHeightLabel.Location = new System.Drawing.Point(387, 10);
+            this.CylindersHeightLabel.Location = new System.Drawing.Point(387, 29);
             this.CylindersHeightLabel.Name = "CylindersHeightLabel";
             this.CylindersHeightLabel.Size = new System.Drawing.Size(160, 17);
             this.CylindersHeightLabel.TabIndex = 83;
@@ -1017,7 +949,7 @@
             // 
             this.widthVerticalWingSupports.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthVerticalWingSupports.ForeColor = System.Drawing.Color.White;
-            this.widthVerticalWingSupports.Location = new System.Drawing.Point(248, 70);
+            this.widthVerticalWingSupports.Location = new System.Drawing.Point(248, 89);
             this.widthVerticalWingSupports.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1043,7 +975,7 @@
             // 
             this.ManipulatorBaseRadiusLabel.AutoSize = true;
             this.ManipulatorBaseRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(2, 74);
+            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(2, 93);
             this.ManipulatorBaseRadiusLabel.Name = "ManipulatorBaseRadiusLabel";
             this.ManipulatorBaseRadiusLabel.Size = new System.Drawing.Size(243, 17);
             this.ManipulatorBaseRadiusLabel.TabIndex = 81;
@@ -1054,7 +986,7 @@
             // 
             this.widthLowerChassis.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthLowerChassis.ForeColor = System.Drawing.Color.White;
-            this.widthLowerChassis.Location = new System.Drawing.Point(248, 39);
+            this.widthLowerChassis.Location = new System.Drawing.Point(248, 58);
             this.widthLowerChassis.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1080,7 +1012,7 @@
             // 
             this.ManipulatorRadiusLabel.AutoSize = true;
             this.ManipulatorRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(14, 41);
+            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(14, 60);
             this.ManipulatorRadiusLabel.Name = "ManipulatorRadiusLabel";
             this.ManipulatorRadiusLabel.Size = new System.Drawing.Size(231, 17);
             this.ManipulatorRadiusLabel.TabIndex = 79;
@@ -1091,7 +1023,7 @@
             // 
             this.WingWidth.BackColor = System.Drawing.SystemColors.HotTrack;
             this.WingWidth.ForeColor = System.Drawing.Color.White;
-            this.WingWidth.Location = new System.Drawing.Point(247, 8);
+            this.WingWidth.Location = new System.Drawing.Point(247, 27);
             this.WingWidth.Maximum = new decimal(new int[] {
             25,
             0,
@@ -1117,7 +1049,7 @@
             // 
             this.SecondDisplayDiagonalLabel.AutoSize = true;
             this.SecondDisplayDiagonalLabel.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(122, 10);
+            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(122, 29);
             this.SecondDisplayDiagonalLabel.Name = "SecondDisplayDiagonalLabel";
             this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(123, 17);
             this.SecondDisplayDiagonalLabel.TabIndex = 75;
@@ -1146,7 +1078,7 @@
             this.ParametersPanel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ParametersPanel.Name = "ParametersPanel";
             this.ParametersPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.ParametersPanel.Size = new System.Drawing.Size(309, 130);
+            this.ParametersPanel.Size = new System.Drawing.Size(309, 153);
             this.ParametersPanel.TabIndex = 67;
             this.ParametersPanel.Visible = false;
             // 
@@ -1154,7 +1086,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(88, 5);
+            this.label1.Location = new System.Drawing.Point(90, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 17);
             this.label1.TabIndex = 74;
@@ -1166,7 +1098,7 @@
             this.ColorBox.BackColor = System.Drawing.Color.LightGray;
             this.ColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ColorBox.Enabled = false;
-            this.ColorBox.Location = new System.Drawing.Point(233, 95);
+            this.ColorBox.Location = new System.Drawing.Point(240, 109);
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.Size = new System.Drawing.Size(70, 24);
             this.ColorBox.TabIndex = 73;
@@ -1176,7 +1108,7 @@
             // ColorLabel
             // 
             this.ColorLabel.ForeColor = System.Drawing.Color.White;
-            this.ColorLabel.Location = new System.Drawing.Point(158, 95);
+            this.ColorLabel.Location = new System.Drawing.Point(165, 109);
             this.ColorLabel.Name = "ColorLabel";
             this.ColorLabel.Size = new System.Drawing.Size(70, 24);
             this.ColorLabel.TabIndex = 72;
@@ -1187,7 +1119,7 @@
             // 
             this.SegmentsBox.BackColor = System.Drawing.SystemColors.HotTrack;
             this.SegmentsBox.ForeColor = System.Drawing.Color.White;
-            this.SegmentsBox.Location = new System.Drawing.Point(233, 33);
+            this.SegmentsBox.Location = new System.Drawing.Point(240, 47);
             this.SegmentsBox.Maximum = new decimal(new int[] {
             64,
             0,
@@ -1212,7 +1144,7 @@
             // SegmentsLabel
             // 
             this.SegmentsLabel.ForeColor = System.Drawing.Color.White;
-            this.SegmentsLabel.Location = new System.Drawing.Point(147, 33);
+            this.SegmentsLabel.Location = new System.Drawing.Point(154, 47);
             this.SegmentsLabel.Name = "SegmentsLabel";
             this.SegmentsLabel.Size = new System.Drawing.Size(81, 24);
             this.SegmentsLabel.TabIndex = 71;
@@ -1223,7 +1155,7 @@
             // 
             this.LengthBox.BackColor = System.Drawing.SystemColors.HotTrack;
             this.LengthBox.ForeColor = System.Drawing.Color.White;
-            this.LengthBox.Location = new System.Drawing.Point(81, 95);
+            this.LengthBox.Location = new System.Drawing.Point(88, 109);
             this.LengthBox.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1249,7 +1181,7 @@
             // 
             this.WidthBox.BackColor = System.Drawing.SystemColors.HotTrack;
             this.WidthBox.ForeColor = System.Drawing.Color.White;
-            this.WidthBox.Location = new System.Drawing.Point(81, 64);
+            this.WidthBox.Location = new System.Drawing.Point(88, 78);
             this.WidthBox.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1274,7 +1206,7 @@
             // LengthLabel
             // 
             this.LengthLabel.ForeColor = System.Drawing.Color.White;
-            this.LengthLabel.Location = new System.Drawing.Point(6, 95);
+            this.LengthLabel.Location = new System.Drawing.Point(13, 109);
             this.LengthLabel.Name = "LengthLabel";
             this.LengthLabel.Size = new System.Drawing.Size(70, 24);
             this.LengthLabel.TabIndex = 60;
@@ -1284,7 +1216,7 @@
             // WidthLabel
             // 
             this.WidthLabel.ForeColor = System.Drawing.Color.White;
-            this.WidthLabel.Location = new System.Drawing.Point(6, 64);
+            this.WidthLabel.Location = new System.Drawing.Point(13, 78);
             this.WidthLabel.Name = "WidthLabel";
             this.WidthLabel.Size = new System.Drawing.Size(70, 24);
             this.WidthLabel.TabIndex = 69;
@@ -1295,7 +1227,7 @@
             // 
             this.RadiusBox.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RadiusBox.ForeColor = System.Drawing.Color.White;
-            this.RadiusBox.Location = new System.Drawing.Point(81, 33);
+            this.RadiusBox.Location = new System.Drawing.Point(88, 47);
             this.RadiusBox.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1321,7 +1253,7 @@
             // 
             this.HeightBox.BackColor = System.Drawing.SystemColors.HotTrack;
             this.HeightBox.ForeColor = System.Drawing.Color.White;
-            this.HeightBox.Location = new System.Drawing.Point(233, 64);
+            this.HeightBox.Location = new System.Drawing.Point(240, 78);
             this.HeightBox.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1346,7 +1278,7 @@
             // RadiusLabel
             // 
             this.RadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.RadiusLabel.Location = new System.Drawing.Point(6, 33);
+            this.RadiusLabel.Location = new System.Drawing.Point(13, 47);
             this.RadiusLabel.Name = "RadiusLabel";
             this.RadiusLabel.Size = new System.Drawing.Size(70, 24);
             this.RadiusLabel.TabIndex = 65;
@@ -1356,7 +1288,7 @@
             // HeightLabel
             // 
             this.HeightLabel.ForeColor = System.Drawing.Color.White;
-            this.HeightLabel.Location = new System.Drawing.Point(158, 64);
+            this.HeightLabel.Location = new System.Drawing.Point(165, 78);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(70, 24);
             this.HeightLabel.TabIndex = 67;
@@ -1599,6 +1531,28 @@
             this.CamerasListLabel.Text = "Камера:";
             this.CamerasListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(137, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "ОБЪЕКТ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(155, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "КАМЕРА";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1620,6 +1574,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.CameraPanel.ResumeLayout(false);
+            this.CameraPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionX)).EndInit();
@@ -1629,6 +1584,7 @@
             this.ObjectsPanel.ResumeLayout(false);
             this.ObjectsPanel.PerformLayout();
             this.SpacePanel.ResumeLayout(false);
+            this.SpacePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PositionZ)).EndInit();
@@ -1684,12 +1640,6 @@
         private System.Windows.Forms.NumericUpDown RotateX;
         private System.Windows.Forms.Label RotateLabel;
         private System.Windows.Forms.Label PositionLabel;
-        private System.Windows.Forms.Label CameraYLabel;
-        private System.Windows.Forms.Label CameraXLabel;
-        private System.Windows.Forms.Label CameraZLabel;
-        private System.Windows.Forms.Label ZLabel;
-        private System.Windows.Forms.Label YLabel;
-        private System.Windows.Forms.Label XLabel;
         private System.Windows.Forms.NumericUpDown PositionZ;
         private System.Windows.Forms.NumericUpDown PositionY;
         private System.Windows.Forms.NumericUpDown PositionX;
@@ -1765,6 +1715,8 @@
         private System.Windows.Forms.Button AddCamera;
         public System.Windows.Forms.ComboBox CamerasList;
         private System.Windows.Forms.Label CamerasListLabel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 
