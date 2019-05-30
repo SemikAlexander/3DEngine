@@ -1769,11 +1769,11 @@ namespace _3DEngine
             scene.ResetCamera();
             scene.Cameras.Add(scene.Camera);
             int index = 0;
-            while (CamerasList.Items.Contains($"Camera-{index}"))
+            while (CamerasList.Items.Contains($"Камера [{index}]"))
             {
                 ++index;
             }
-            CamerasList.Items.Add($"Camera-{index}");
+            CamerasList.Items.Add($"Камера [{index}]");
             CamerasList.SelectedIndex = CamerasList.Items.Count - 1;
             DeleteCamera.Enabled = true;
             scene.PaintObjects();
