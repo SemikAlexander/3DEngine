@@ -32,8 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.MainTimer = new System.Windows.Forms.Timer(this.components);
             this.CameraPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DeleteCamera = new System.Windows.Forms.Button();
             this.CameraPositionZ = new System.Windows.Forms.NumericUpDown();
+            this.AddCamera = new System.Windows.Forms.Button();
             this.CameraPositionY = new System.Windows.Forms.NumericUpDown();
+            this.CamerasList = new System.Windows.Forms.ComboBox();
+            this.CamerasListLabel = new System.Windows.Forms.Label();
             this.CameraPositionX = new System.Windows.Forms.NumericUpDown();
             this.CameraTargetZ = new System.Windows.Forms.NumericUpDown();
             this.CameraTargetY = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +55,7 @@
             this.DeleteObject = new System.Windows.Forms.Button();
             this.AddObject = new System.Windows.Forms.Button();
             this.SpacePanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.ScaleZ = new System.Windows.Forms.NumericUpDown();
             this.ScaleY = new System.Windows.Forms.NumericUpDown();
             this.PositionZ = new System.Windows.Forms.NumericUpDown();
@@ -117,12 +123,7 @@
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вPNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вJPGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteCamera = new System.Windows.Forms.Button();
-            this.AddCamera = new System.Windows.Forms.Button();
-            this.CamerasList = new System.Windows.Forms.ComboBox();
-            this.CamerasListLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.CameraPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CameraPositionY)).BeginInit();
@@ -194,6 +195,32 @@
             this.CameraPanel.Size = new System.Drawing.Size(315, 153);
             this.CameraPanel.TabIndex = 1;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(155, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "КАМЕРА";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DeleteCamera
+            // 
+            this.DeleteCamera.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.DeleteCamera.Enabled = false;
+            this.DeleteCamera.FlatAppearance.BorderSize = 0;
+            this.DeleteCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteCamera.ForeColor = System.Drawing.Color.White;
+            this.DeleteCamera.Location = new System.Drawing.Point(287, 91);
+            this.DeleteCamera.Name = "DeleteCamera";
+            this.DeleteCamera.Size = new System.Drawing.Size(25, 25);
+            this.DeleteCamera.TabIndex = 79;
+            this.DeleteCamera.Text = "-";
+            this.DeleteCamera.UseVisualStyleBackColor = false;
+            this.DeleteCamera.Click += new System.EventHandler(this.DeleteCamera_Click);
+            // 
             // CameraPositionZ
             // 
             this.CameraPositionZ.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -211,6 +238,20 @@
             this.CameraPositionZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CameraPositionZ.ValueChanged += new System.EventHandler(this.CameraPositionZ_ValueChanged);
             // 
+            // AddCamera
+            // 
+            this.AddCamera.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.AddCamera.FlatAppearance.BorderSize = 0;
+            this.AddCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCamera.ForeColor = System.Drawing.Color.White;
+            this.AddCamera.Location = new System.Drawing.Point(256, 91);
+            this.AddCamera.Name = "AddCamera";
+            this.AddCamera.Size = new System.Drawing.Size(25, 25);
+            this.AddCamera.TabIndex = 78;
+            this.AddCamera.Text = "+";
+            this.AddCamera.UseVisualStyleBackColor = false;
+            this.AddCamera.Click += new System.EventHandler(this.AddCamera_Click_1);
+            // 
             // CameraPositionY
             // 
             this.CameraPositionY.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -227,6 +268,26 @@
             this.CameraPositionY.TabIndex = 48;
             this.CameraPositionY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CameraPositionY.ValueChanged += new System.EventHandler(this.CameraPositionY_ValueChanged);
+            // 
+            // CamerasList
+            // 
+            this.CamerasList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CamerasList.FormattingEnabled = true;
+            this.CamerasList.Location = new System.Drawing.Point(89, 92);
+            this.CamerasList.Name = "CamerasList";
+            this.CamerasList.Size = new System.Drawing.Size(161, 25);
+            this.CamerasList.TabIndex = 76;
+            this.CamerasList.SelectedIndexChanged += new System.EventHandler(this.CamerasList_SelectedIndexChanged);
+            // 
+            // CamerasListLabel
+            // 
+            this.CamerasListLabel.ForeColor = System.Drawing.Color.White;
+            this.CamerasListLabel.Location = new System.Drawing.Point(13, 91);
+            this.CamerasListLabel.Name = "CamerasListLabel";
+            this.CamerasListLabel.Size = new System.Drawing.Size(70, 23);
+            this.CamerasListLabel.TabIndex = 77;
+            this.CamerasListLabel.Text = "Камера:";
+            this.CamerasListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CameraPositionX
             // 
@@ -457,6 +518,17 @@
             this.SpacePanel.Padding = new System.Windows.Forms.Padding(5);
             this.SpacePanel.Size = new System.Drawing.Size(314, 153);
             this.SpacePanel.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(137, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "ОБЪЕКТ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScaleZ
             // 
@@ -723,6 +795,7 @@
             // ConsoleParameters
             // 
             this.ConsoleParameters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConsoleParameters.Controls.Add(this.label6);
             this.ConsoleParameters.Controls.Add(this.NumOfWings);
             this.ConsoleParameters.Controls.Add(this.label3);
             this.ConsoleParameters.Controls.Add(this.widthLop);
@@ -744,7 +817,7 @@
             this.ConsoleParameters.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.ConsoleParameters.Name = "ConsoleParameters";
             this.ConsoleParameters.Padding = new System.Windows.Forms.Padding(5);
-            this.ConsoleParameters.Size = new System.Drawing.Size(629, 146);
+            this.ConsoleParameters.Size = new System.Drawing.Size(629, 154);
             this.ConsoleParameters.TabIndex = 68;
             this.ConsoleParameters.Visible = false;
             // 
@@ -752,7 +825,7 @@
             // 
             this.NumOfWings.BackColor = System.Drawing.SystemColors.HotTrack;
             this.NumOfWings.ForeColor = System.Drawing.Color.White;
-            this.NumOfWings.Location = new System.Drawing.Point(554, 118);
+            this.NumOfWings.Location = new System.Drawing.Point(554, 126);
             this.NumOfWings.Maximum = new decimal(new int[] {
             3,
             0,
@@ -778,7 +851,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(407, 122);
+            this.label3.Location = new System.Drawing.Point(407, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 17);
             this.label3.TabIndex = 93;
@@ -795,7 +868,7 @@
             0,
             0,
             65536});
-            this.widthLop.Location = new System.Drawing.Point(554, 58);
+            this.widthLop.Location = new System.Drawing.Point(554, 66);
             this.widthLop.Maximum = new decimal(new int[] {
             10,
             0,
@@ -821,7 +894,7 @@
             // 
             this.CylindersRadiusLabel.AutoSize = true;
             this.CylindersRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersRadiusLabel.Location = new System.Drawing.Point(422, 60);
+            this.CylindersRadiusLabel.Location = new System.Drawing.Point(422, 68);
             this.CylindersRadiusLabel.Name = "CylindersRadiusLabel";
             this.CylindersRadiusLabel.Size = new System.Drawing.Size(125, 17);
             this.CylindersRadiusLabel.TabIndex = 91;
@@ -832,7 +905,7 @@
             // 
             this.Sit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Sit.ForeColor = System.Drawing.Color.White;
-            this.Sit.Location = new System.Drawing.Point(554, 89);
+            this.Sit.Location = new System.Drawing.Point(554, 97);
             this.Sit.Maximum = new decimal(new int[] {
             15,
             0,
@@ -858,7 +931,7 @@
             // 
             this.CrossButtonSizeLabel.AutoSize = true;
             this.CrossButtonSizeLabel.ForeColor = System.Drawing.Color.White;
-            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(370, 91);
+            this.CrossButtonSizeLabel.Location = new System.Drawing.Point(370, 99);
             this.CrossButtonSizeLabel.Name = "CrossButtonSizeLabel";
             this.CrossButtonSizeLabel.Size = new System.Drawing.Size(181, 17);
             this.CrossButtonSizeLabel.TabIndex = 85;
@@ -869,7 +942,7 @@
             // 
             this.widthVerticalBackWing.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthVerticalBackWing.ForeColor = System.Drawing.Color.White;
-            this.widthVerticalBackWing.Location = new System.Drawing.Point(247, 118);
+            this.widthVerticalBackWing.Location = new System.Drawing.Point(247, 126);
             this.widthVerticalBackWing.Maximum = new decimal(new int[] {
             30,
             0,
@@ -895,7 +968,7 @@
             // 
             this.VolumeSpaceLabel.AutoSize = true;
             this.VolumeSpaceLabel.ForeColor = System.Drawing.Color.White;
-            this.VolumeSpaceLabel.Location = new System.Drawing.Point(25, 122);
+            this.VolumeSpaceLabel.Location = new System.Drawing.Point(25, 130);
             this.VolumeSpaceLabel.Name = "VolumeSpaceLabel";
             this.VolumeSpaceLabel.Size = new System.Drawing.Size(216, 17);
             this.VolumeSpaceLabel.TabIndex = 79;
@@ -912,7 +985,7 @@
             0,
             0,
             65536});
-            this.radiusChassis.Location = new System.Drawing.Point(554, 27);
+            this.radiusChassis.Location = new System.Drawing.Point(554, 35);
             this.radiusChassis.Maximum = new decimal(new int[] {
             10,
             0,
@@ -938,7 +1011,7 @@
             // 
             this.CylindersHeightLabel.AutoSize = true;
             this.CylindersHeightLabel.ForeColor = System.Drawing.Color.White;
-            this.CylindersHeightLabel.Location = new System.Drawing.Point(387, 29);
+            this.CylindersHeightLabel.Location = new System.Drawing.Point(387, 37);
             this.CylindersHeightLabel.Name = "CylindersHeightLabel";
             this.CylindersHeightLabel.Size = new System.Drawing.Size(160, 17);
             this.CylindersHeightLabel.TabIndex = 83;
@@ -949,7 +1022,7 @@
             // 
             this.widthVerticalWingSupports.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthVerticalWingSupports.ForeColor = System.Drawing.Color.White;
-            this.widthVerticalWingSupports.Location = new System.Drawing.Point(248, 89);
+            this.widthVerticalWingSupports.Location = new System.Drawing.Point(248, 97);
             this.widthVerticalWingSupports.Maximum = new decimal(new int[] {
             5,
             0,
@@ -975,7 +1048,7 @@
             // 
             this.ManipulatorBaseRadiusLabel.AutoSize = true;
             this.ManipulatorBaseRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(2, 93);
+            this.ManipulatorBaseRadiusLabel.Location = new System.Drawing.Point(2, 101);
             this.ManipulatorBaseRadiusLabel.Name = "ManipulatorBaseRadiusLabel";
             this.ManipulatorBaseRadiusLabel.Size = new System.Drawing.Size(243, 17);
             this.ManipulatorBaseRadiusLabel.TabIndex = 81;
@@ -986,7 +1059,7 @@
             // 
             this.widthLowerChassis.BackColor = System.Drawing.SystemColors.HotTrack;
             this.widthLowerChassis.ForeColor = System.Drawing.Color.White;
-            this.widthLowerChassis.Location = new System.Drawing.Point(248, 58);
+            this.widthLowerChassis.Location = new System.Drawing.Point(248, 66);
             this.widthLowerChassis.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1012,7 +1085,7 @@
             // 
             this.ManipulatorRadiusLabel.AutoSize = true;
             this.ManipulatorRadiusLabel.ForeColor = System.Drawing.Color.White;
-            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(14, 60);
+            this.ManipulatorRadiusLabel.Location = new System.Drawing.Point(14, 68);
             this.ManipulatorRadiusLabel.Name = "ManipulatorRadiusLabel";
             this.ManipulatorRadiusLabel.Size = new System.Drawing.Size(231, 17);
             this.ManipulatorRadiusLabel.TabIndex = 79;
@@ -1023,7 +1096,7 @@
             // 
             this.WingWidth.BackColor = System.Drawing.SystemColors.HotTrack;
             this.WingWidth.ForeColor = System.Drawing.Color.White;
-            this.WingWidth.Location = new System.Drawing.Point(247, 27);
+            this.WingWidth.Location = new System.Drawing.Point(247, 35);
             this.WingWidth.Maximum = new decimal(new int[] {
             25,
             0,
@@ -1049,7 +1122,7 @@
             // 
             this.SecondDisplayDiagonalLabel.AutoSize = true;
             this.SecondDisplayDiagonalLabel.ForeColor = System.Drawing.Color.White;
-            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(122, 29);
+            this.SecondDisplayDiagonalLabel.Location = new System.Drawing.Point(122, 37);
             this.SecondDisplayDiagonalLabel.Name = "SecondDisplayDiagonalLabel";
             this.SecondDisplayDiagonalLabel.Size = new System.Drawing.Size(123, 17);
             this.SecondDisplayDiagonalLabel.TabIndex = 75;
@@ -1367,14 +1440,14 @@
             // импортToolStripMenuItem
             // 
             this.импортToolStripMenuItem.Name = "импортToolStripMenuItem";
-            this.импортToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.импортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.импортToolStripMenuItem.Text = "Импорт";
             this.импортToolStripMenuItem.Click += new System.EventHandler(this.ИмпортToolStripMenuItem_Click);
             // 
             // експортToolStripMenuItem
             // 
             this.експортToolStripMenuItem.Name = "експортToolStripMenuItem";
-            this.експортToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.експортToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.експортToolStripMenuItem.Text = "Экспорт";
             this.експортToolStripMenuItem.Click += new System.EventHandler(this.ЕкспортToolStripMenuItem_Click);
             // 
@@ -1391,14 +1464,14 @@
             // каркасToolStripMenuItem
             // 
             this.каркасToolStripMenuItem.Name = "каркасToolStripMenuItem";
-            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.каркасToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.каркасToolStripMenuItem.Text = "Каркасное";
             this.каркасToolStripMenuItem.Click += new System.EventHandler(this.КаркасToolStripMenuItem_Click);
             // 
             // объёмноеToolStripMenuItem
             // 
             this.объёмноеToolStripMenuItem.Name = "объёмноеToolStripMenuItem";
-            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.объёмноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.объёмноеToolStripMenuItem.Text = "Объёмное";
             this.объёмноеToolStripMenuItem.Click += new System.EventHandler(this.ОбъёмноеToolStripMenuItem_Click);
             // 
@@ -1447,14 +1520,14 @@
             // центральноеToolStripMenuItem
             // 
             this.центральноеToolStripMenuItem.Name = "центральноеToolStripMenuItem";
-            this.центральноеToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.центральноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.центральноеToolStripMenuItem.Text = "Центральное";
             this.центральноеToolStripMenuItem.Click += new System.EventHandler(this.ЦентральноеToolStripMenuItem_Click);
             // 
             // параллельноеToolStripMenuItem
             // 
             this.параллельноеToolStripMenuItem.Name = "параллельноеToolStripMenuItem";
-            this.параллельноеToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.параллельноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.параллельноеToolStripMenuItem.Text = "Ортогональное";
             this.параллельноеToolStripMenuItem.Click += new System.EventHandler(this.ПараллельноеToolStripMenuItem_Click);
             // 
@@ -1482,76 +1555,16 @@
             this.вJPGToolStripMenuItem.Text = "В JPG";
             this.вJPGToolStripMenuItem.Click += new System.EventHandler(this.ВJPGToolStripMenuItem_Click);
             // 
-            // DeleteCamera
+            // label6
             // 
-            this.DeleteCamera.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.DeleteCamera.Enabled = false;
-            this.DeleteCamera.FlatAppearance.BorderSize = 0;
-            this.DeleteCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteCamera.ForeColor = System.Drawing.Color.White;
-            this.DeleteCamera.Location = new System.Drawing.Point(287, 91);
-            this.DeleteCamera.Name = "DeleteCamera";
-            this.DeleteCamera.Size = new System.Drawing.Size(25, 25);
-            this.DeleteCamera.TabIndex = 79;
-            this.DeleteCamera.Text = "-";
-            this.DeleteCamera.UseVisualStyleBackColor = false;
-            this.DeleteCamera.Click += new System.EventHandler(this.DeleteCamera_Click);
-            // 
-            // AddCamera
-            // 
-            this.AddCamera.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.AddCamera.FlatAppearance.BorderSize = 0;
-            this.AddCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCamera.ForeColor = System.Drawing.Color.White;
-            this.AddCamera.Location = new System.Drawing.Point(256, 91);
-            this.AddCamera.Name = "AddCamera";
-            this.AddCamera.Size = new System.Drawing.Size(25, 25);
-            this.AddCamera.TabIndex = 78;
-            this.AddCamera.Text = "+";
-            this.AddCamera.UseVisualStyleBackColor = false;
-            this.AddCamera.Click += new System.EventHandler(this.AddCamera_Click_1);
-            // 
-            // CamerasList
-            // 
-            this.CamerasList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CamerasList.FormattingEnabled = true;
-            this.CamerasList.Location = new System.Drawing.Point(89, 92);
-            this.CamerasList.Name = "CamerasList";
-            this.CamerasList.Size = new System.Drawing.Size(161, 25);
-            this.CamerasList.TabIndex = 76;
-            this.CamerasList.SelectedIndexChanged += new System.EventHandler(this.CamerasList_SelectedIndexChanged);
-            // 
-            // CamerasListLabel
-            // 
-            this.CamerasListLabel.ForeColor = System.Drawing.Color.White;
-            this.CamerasListLabel.Location = new System.Drawing.Point(13, 91);
-            this.CamerasListLabel.Name = "CamerasListLabel";
-            this.CamerasListLabel.Size = new System.Drawing.Size(70, 23);
-            this.CamerasListLabel.TabIndex = 77;
-            this.CamerasListLabel.Text = "Камера:";
-            this.CamerasListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(137, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 17);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "ОБЪЕКТ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(155, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
-            this.label5.TabIndex = 80;
-            this.label5.Text = "КАМЕРА";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(293, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 17);
+            this.label6.TabIndex = 94;
+            this.label6.Text = "ПАРАМЕТРИЗАЦИЯ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
@@ -1717,6 +1730,7 @@
         private System.Windows.Forms.Label CamerasListLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -1753,10 +1753,12 @@ namespace _3DEngine
         private void ЦентральноеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             scene.Camera.IsCentralProjection = true;
+            scene.PaintObjects();
         }
         private void ПараллельноеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             scene.Camera.IsCentralProjection = false;
+            scene.PaintObjects();
         }
         private void Main_Load(object sender, EventArgs e)
         {
